@@ -9,7 +9,7 @@ public class MovePrefab : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        deltaX = 76.935682f;
+        deltaX = 102.535682f;
     }
 
     // Update is called once per frame

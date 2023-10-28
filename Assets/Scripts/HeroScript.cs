@@ -21,7 +21,7 @@ public class HeroScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
         anim = GetComponent<Animator>();
-        speed = 0.07f;
+        speed = 0.2f;
         onGround = true;
     }
 
