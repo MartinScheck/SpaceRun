@@ -79,14 +79,43 @@ public class MovePrefab : MonoBehaviour
             prefabToMove.transform.position.y,
             prefabToMove.transform.position.z);
 
+        float minRange = prefabToMove.transform.position.x;
+        float maxRange = prefabToMove.transform.position.x + 6f;
+
+        float gunRange = Random.Range(minRange, maxRange);
+
+        float lazerRange = Random.Range(minRange, maxRange);
+
+        Vector3 fuelCanPosition = new Vector3(Random.Range(minRange, maxRange), fuelCan.transform.position.y, fuelCan.transform.position.z);
+        fuelCan.transform.position = fuelCanPosition;
+
+        Vector3 lazerPosition = new Vector3(lazerRange, lazer.transform.position.y, lazer.transform.position.z);
+        lazer.transform.position = lazerPosition;
+
+        float crateRange = Random.Range(-6f, -7f);
+        if (Random.Range(0, 2) == 0)
+        {
+            crateRange = Random.Range(6f, 7f);
+        }
+
+        Vector3 cratePosition = new Vector3(lazerRange + crateRange, crate.transform.position.y, crate.transform.position.z);
+        crate.transform.position = cratePosition;
+
+        gun.transform.position = new Vector3(gunRange, gun.transform.position.y, gun.transform.position.z);
+        gunPiece.transform.position = new Vector3(gunRange, gunPiece.transform.position.y, gunPiece.transform.position.z);
+
         sensorToActivate.SetActive(true);
     }
 
     private void setLevelObjects()
     {
-        fuelCan.SetActive(random());
+
+        fuelCan.SetActive(random() && random());
+
         lazer.SetActive(random());
-        crate.SetActive(random());
+
+        crate.SetActive(random() && random());
+
         bool laserGunBool = random();
         gun.SetActive(laserGunBool);
         gunPiece.SetActive(laserGunBool);
