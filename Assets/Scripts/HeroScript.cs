@@ -21,7 +21,7 @@ public class HeroScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
         anim = GetComponent<Animator>();
-        speed = 10.0f;
+        speed = 5f;
         onGround = true;
     }
 
@@ -64,11 +64,6 @@ public class HeroScript : MonoBehaviour
             //anim.SetTrigger("Jump"); //jump animation
 
         }
-        
-    }
-
-    void FixedUpdate()
-    {
         if (Input.GetKey("right"))
         {
 
@@ -89,6 +84,11 @@ public class HeroScript : MonoBehaviour
             transform.localScale = new Vector3(-1f, 1f, 1f);
             //anim.SetInteger("Trans", transitionState); //run animation
         }
+    }
+
+    void FixedUpdate()
+    {
+        
 
     }
 
