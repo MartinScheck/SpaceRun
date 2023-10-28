@@ -21,7 +21,7 @@ public class HeroScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
         anim = GetComponent<Animator>();
-        speed = 0.07f;
+        speed = 10.0f;
         onGround = true;
     }
 
@@ -44,41 +44,51 @@ public class HeroScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKey("right"))
-        {
-            transitionState = 2;
-            transform.position = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
-            transform.localScale = new Vector3(1f, 1f, 1f);
-            anim.SetInteger("Trans", transitionState); //run animation
-        }
- 
-        if (Input.GetKey("left"))
-        {
-            transitionState = 2;
-            transform.position = new Vector3(transform.position.x - speed, transform.position.y, transform.position.z);
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-            anim.SetInteger("Trans", transitionState); //run animation
-        }
-
-
         if (Input.GetKeyDown("up") && onGround == true)
         {
-  
-                Rigidbody2D rb = GetComponent<Rigidbody2D>();
-                // Add a vertical force to the player.
-                rb.AddForce(new Vector2(0f, 8.0f), ForceMode2D.Impulse);
-                onGround = false;
-                anim.SetTrigger("Jump"); //jump animation
+
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            // Add a vertical force to the player.
+            rb.AddForce(new Vector2(0f, 8.0f), ForceMode2D.Impulse);
+            onGround = false;
+            //anim.SetTrigger("Jump"); //jump animation
 
         }
-
-        if(Input.GetKeyUp("left") || Input.GetKeyUp("right")) //|| Input.GetKeyUp("up//)
+        if (Input.GetKeyDown("down") && onGround == true)
         {
-            transitionState = 1;
-            anim.SetInteger("Trans", transitionState); //stand animation
-        }
 
+            //Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            // Add a vertical force to the player.
+            //rb.AddForce(new Vector2(0f, 8.0f), ForceMode2D.Impulse);
+            //onGround = false;
+            //anim.SetTrigger("Jump"); //jump animation
+
+        }
+        
+    }
+
+    void FixedUpdate()
+    {
+        if (Input.GetKey("right"))
+        {
+
+            float distanceToMove = speed * Time.deltaTime;
+            transform.position = transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
+            //transitionState = 2;
+            //transform.position = new Vector3((transform.position.x + speed) * Time.fixedDeltaTime, transform.position.y, transform.position.z);
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            //anim.SetInteger("Trans", transitionState); //run animation
+        }
+        if (Input.GetKey("left"))
+        {
+
+            float distanceToMove = speed * Time.deltaTime;
+            transform.position = transform.position = new Vector3(transform.position.x - distanceToMove, transform.position.y, transform.position.z);
+            //transitionState = 2;
+            //transform.position = new Vector3((transform.position.x - speed) * Time.fixedDeltaTime, transform.position.y, transform.position.z);
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+            //anim.SetInteger("Trans", transitionState); //run animation
+        }
 
     }
 
@@ -86,7 +96,7 @@ public class HeroScript : MonoBehaviour
     {
         onGround = true;
         transitionState = 1;
-        anim.SetInteger("Trans", transitionState); //stand animation
+       // anim.SetInteger("Trans", transitionState); //stand animation
 
     }
     
