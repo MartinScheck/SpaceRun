@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePrefab : MonoBehaviour
+public class PrefabRandomizer : MonoBehaviour
 {
     public GameObject fuelCan;
     public GameObject lazer;
@@ -10,28 +10,14 @@ public class MovePrefab : MonoBehaviour
     public GameObject crate;
     public GameObject gunPiece;
 
-    public GameObject light_L01;
-    public GameObject light_L02;
-    public GameObject light_L03;
-    public GameObject light_L04;
-
-    public GameObject light01_W01;
-    public GameObject light02_W01;
-    public GameObject light03_W01;
-    public GameObject light04_W01;
-    public GameObject light05_W01;
-    public GameObject light06_W01;
-    public GameObject light07_W01;
-    public GameObject light08_W01;
-
-    public GameObject light01_W02;
-    public GameObject light02_W02;
-    public GameObject light03_W02;
-    public GameObject light04_W02;
-    public GameObject light05_W02;
-    public GameObject light06_W02;
-    public GameObject light07_W02;
-    public GameObject light08_W02;
+    public GameObject light01;
+    public GameObject light02;
+    public GameObject light03;
+    public GameObject light04;
+    public GameObject light05;
+    public GameObject light06;
+    public GameObject light07;
+    public GameObject light08;
 
     public GameObject windowTopOff;
     public GameObject windowTopBubble;
@@ -39,17 +25,12 @@ public class MovePrefab : MonoBehaviour
     public GameObject windowBottomOff;
     public GameObject windowBottomBubble;
 
-    public GameObject prefabToMove, sensorToActivate;
-    private float deltaX;
-
-    private float updateInterval = 0.5f;
-    private float lastUpdateTime;
-
+    public GameObject sensorToActivate;
 
     // Start is called before the first frame update
     void Start()
     {
-        deltaX = 102.535682f;
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -58,27 +39,10 @@ public class MovePrefab : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        if (Time.time - lastUpdateTime >= updateInterval)
-        {
-            DeactivateOrActivateLight();
-            lastUpdateTime = Time.time;
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         setLevelObjects();
         setBackGround();
-
-        gameObject.SetActive(false);
-        prefabToMove.transform.position = new Vector3(
-            prefabToMove.transform.position.x + deltaX,
-            prefabToMove.transform.position.y,
-            prefabToMove.transform.position.z);
-
         sensorToActivate.SetActive(true);
     }
 
@@ -95,6 +59,7 @@ public class MovePrefab : MonoBehaviour
     private void setBackGround()
     {
         randomWindow();
+        randomLights();
     }
 
     private bool random()
@@ -144,49 +109,8 @@ public class MovePrefab : MonoBehaviour
         }
     }
 
-    private void DeactivateOrActivateLight()
+    private void randomLights()
     {
-
-        light_L01.SetActive(random());
-
-        light_L02.SetActive(random());
-
-        light_L03.SetActive(random());
-
-        light_L04.SetActive(random());
-
-        light01_W01.SetActive(random());
-
-        light02_W01.SetActive(random());
-
-        light03_W01.SetActive(random());
-
-        light04_W01.SetActive(random());
-
-        light05_W01.SetActive(random());
-
-        light06_W01.SetActive(random());
-
-        light07_W01.SetActive(random());
-
-        light08_W01.SetActive(random());
-
-
-        light01_W02.SetActive(random());
-
-        light02_W02.SetActive(random());
-
-        light03_W02.SetActive(random());
-
-        light04_W02.SetActive(random());
-
-        light05_W02.SetActive(random());
-
-        light06_W02.SetActive(random());
-
-        light07_W02.SetActive(random());
-
-        light08_W02.SetActive(random());
 
     }
 
@@ -195,5 +119,6 @@ public class MovePrefab : MonoBehaviour
         int randomeValue = Random.Range(0, 5);
         return randomeValue;
     }
+
 
 }
