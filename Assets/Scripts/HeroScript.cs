@@ -49,22 +49,30 @@ public class HeroScript : MonoBehaviour
 
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             // Add a vertical force to the player.
-            rb.AddForce(new Vector2(0f, 8.0f), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0f, 9.0f), ForceMode2D.Impulse);
             onGround = false;
-            //anim.SetTrigger("Jump"); //jump animation
+            anim.SetTrigger("Jump"); //jump animation
+
+        }
+        if (Input.GetKeyUp("right") || Input.GetKeyUp("left"))
+        {
+
+            transitionState = 1;
+            anim.SetInteger("Trans", transitionState); //stand animation
 
         }
         if (Input.GetKeyDown("down") && onGround == true)
         {
 
-            //Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
             // Add a vertical force to the player.
-            //rb.AddForce(new Vector2(0f, 8.0f), ForceMode2D.Impulse);
-            //onGround = false;
-            //anim.SetTrigger("Jump"); //jump animation
+            onGround = true;
+            transitionState = 4;
+            anim.SetInteger("Trans",transitionState); //Die animation
+            anim.Play("Hero_Fall");
 
         }
-        
+
     }
 
     void FixedUpdate()
@@ -74,29 +82,28 @@ public class HeroScript : MonoBehaviour
 
             float distanceToMove = speed * Time.deltaTime;
             transform.position = transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
-            //transitionState = 2;
-            //transform.position = new Vector3((transform.position.x + speed) * Time.fixedDeltaTime, transform.position.y, transform.position.z);
             transform.localScale = new Vector3(1f, 1f, 1f);
-            //anim.SetInteger("Trans", transitionState); //run animation
+            transitionState = 2;
+            anim.SetInteger("Trans", transitionState); //run animation
         }
         if (Input.GetKey("left"))
         {
 
             float distanceToMove = speed * Time.deltaTime;
             transform.position = transform.position = new Vector3(transform.position.x - distanceToMove, transform.position.y, transform.position.z);
-            //transitionState = 2;
-            //transform.position = new Vector3((transform.position.x - speed) * Time.fixedDeltaTime, transform.position.y, transform.position.z);
+            
             transform.localScale = new Vector3(-1f, 1f, 1f);
-            //anim.SetInteger("Trans", transitionState); //run animation
+            transitionState = 2;
+            anim.SetInteger("Trans", transitionState); //run animation
         }
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        onGround = true;
-        transitionState = 1;
-       // anim.SetInteger("Trans", transitionState); //stand animation
+       onGround = true;
+       transitionState = 1;
+       anim.SetInteger("Trans", transitionState); //stand animation
 
     }
     
