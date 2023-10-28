@@ -134,12 +134,12 @@ GameObject:
   - component: {fileID: 1129121}
   - component: {fileID: 1129122}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (1)
+  m_Name: Enviro_LightsOut_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1129121
 Transform:
   m_ObjectHideFlags: 0
@@ -218,12 +218,12 @@ GameObject:
   - component: {fileID: 17141552}
   - component: {fileID: 17141553}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (6)
+  m_Name: Enviro_LightsOut_02 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &17141552
 Transform:
   m_ObjectHideFlags: 0
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 28746167}
   - component: {fileID: 28746166}
   m_Layer: 0
-  m_Name: FuelCan
+  m_Name: FuelCan_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -719,7 +719,7 @@ GameObject:
   - component: {fileID: 57338896}
   - component: {fileID: 57338897}
   m_Layer: 0
-  m_Name: Crates
+  m_Name: Crates_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1047,12 +1047,12 @@ GameObject:
   - component: {fileID: 102177142}
   - component: {fileID: 102177143}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (5)
+  m_Name: Enviro_LightsOut_02 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &102177142
 Transform:
   m_ObjectHideFlags: 0
@@ -1222,7 +1222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &124333746
 Transform:
   m_ObjectHideFlags: 0
@@ -1334,7 +1334,7 @@ GameObject:
   - component: {fileID: 140340282}
   - component: {fileID: 140340281}
   m_Layer: 0
-  m_Name: GunCharge
+  m_Name: Gun_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1443,7 +1443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &162665070
 Transform:
   m_ObjectHideFlags: 0
@@ -1524,7 +1524,7 @@ GameObject:
   - component: {fileID: 164581260}
   - component: {fileID: 164581259}
   m_Layer: 0
-  m_Name: Lazers
+  m_Name: Lazers_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1655,12 +1655,12 @@ GameObject:
   - component: {fileID: 177054737}
   - component: {fileID: 177054738}
   m_Layer: 0
-  m_Name: Enviro_ScreenOff_bottom
+  m_Name: Enviro_Screen_Off_bottom_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &177054737
 Transform:
   m_ObjectHideFlags: 0
@@ -1739,12 +1739,12 @@ GameObject:
   - component: {fileID: 186910820}
   - component: {fileID: 186910821}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (7)
+  m_Name: Enviro_LightsOut_03 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &186910820
 Transform:
   m_ObjectHideFlags: 0
@@ -1858,12 +1858,12 @@ GameObject:
   - component: {fileID: 211235287}
   - component: {fileID: 211235288}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (4)
+  m_Name: Enviro_LightsOut_04 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &211235287
 Transform:
   m_ObjectHideFlags: 0
@@ -2115,7 +2115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &247724493
 Transform:
   m_ObjectHideFlags: 0
@@ -2363,12 +2363,12 @@ GameObject:
   - component: {fileID: 274506956}
   - component: {fileID: 274506957}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (5)
+  m_Name: Enviro_LightsOut_03 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &274506956
 Transform:
   m_ObjectHideFlags: 0
@@ -2531,12 +2531,12 @@ GameObject:
   - component: {fileID: 300535473}
   - component: {fileID: 300535474}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_02
+  m_Name: Enviro_LightsOut_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &300535473
 Transform:
   m_ObjectHideFlags: 0
@@ -2777,7 +2777,7 @@ GameObject:
   - component: {fileID: 321069007}
   - component: {fileID: 321069006}
   m_Layer: 0
-  m_Name: Enviro_ScreenOff_top
+  m_Name: Enviro_Screen_Off_top_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3279,12 +3279,12 @@ GameObject:
   - component: {fileID: 336873948}
   - component: {fileID: 336873949}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_04 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &336873948
 Transform:
   m_ObjectHideFlags: 0
@@ -3889,12 +3889,12 @@ GameObject:
   - component: {fileID: 373937016}
   - component: {fileID: 373937017}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (6)
+  m_Name: Enviro_LightsOut_04 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &373937016
 Transform:
   m_ObjectHideFlags: 0
@@ -4098,12 +4098,12 @@ GameObject:
   - component: {fileID: 425522452}
   - component: {fileID: 425522453}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_03 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &425522452
 Transform:
   m_ObjectHideFlags: 0
@@ -4182,12 +4182,12 @@ GameObject:
   - component: {fileID: 430670918}
   - component: {fileID: 430670919}
   m_Layer: 0
-  m_Name: Enviro_ScreenOn_bottom
+  m_Name: Enviro_Bubble_On_bottom_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &430670918
 Transform:
   m_ObjectHideFlags: 0
@@ -4266,12 +4266,12 @@ GameObject:
   - component: {fileID: 451466654}
   - component: {fileID: 451466655}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_03
+  m_Name: Enviro_LightsOut_03 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &451466654
 Transform:
   m_ObjectHideFlags: 0
@@ -4553,12 +4553,12 @@ GameObject:
   - component: {fileID: 462428039}
   - component: {fileID: 462428040}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (1)
+  m_Name: Enviro_LightsOut_04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &462428039
 Transform:
   m_ObjectHideFlags: 0
@@ -4672,12 +4672,12 @@ GameObject:
   - component: {fileID: 477357397}
   - component: {fileID: 477357398}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (2)
+  m_Name: Enviro_LightsOut_03 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &477357397
 Transform:
   m_ObjectHideFlags: 0
@@ -4956,12 +4956,12 @@ GameObject:
   - component: {fileID: 517114613}
   - component: {fileID: 517114614}
   m_Layer: 0
-  m_Name: Enviro_ScreenOff_top
+  m_Name: Enviro_Screen_Off_top_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &517114613
 Transform:
   m_ObjectHideFlags: 0
@@ -5163,12 +5163,12 @@ GameObject:
   - component: {fileID: 558509272}
   - component: {fileID: 558509273}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_04 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &558509272
 Transform:
   m_ObjectHideFlags: 0
@@ -5247,12 +5247,12 @@ GameObject:
   - component: {fileID: 577323015}
   - component: {fileID: 577323016}
   m_Layer: 0
-  m_Name: Enviro_ScreenOn_bottom
+  m_Name: Enviro_Bubble_On_bottom_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &577323015
 Transform:
   m_ObjectHideFlags: 0
@@ -5655,7 +5655,7 @@ GameObject:
   - component: {fileID: 607741875}
   - component: {fileID: 607741874}
   m_Layer: 0
-  m_Name: Lazers
+  m_Name: Lazers_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5900,6 +5900,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aebae1894ed97343ab5898221521404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuelCan: {fileID: 1885859244}
+  lazer: {fileID: 607741872}
+  gun: {fileID: 1548478318}
+  crate: {fileID: 57338895}
+  gunPiece: {fileID: 857743280}
+  light_L01: {fileID: 806909851}
+  light_L02: {fileID: 1331583634}
+  light_L03: {fileID: 451466653}
+  light_L04: {fileID: 790206237}
+  light01_W01: {fileID: 425522451}
+  light02_W01: {fileID: 1769763053}
+  light03_W01: {fileID: 477357396}
+  light04_W01: {fileID: 1536977248}
+  light05_W01: {fileID: 1884291097}
+  light06_W01: {fileID: 274506955}
+  light07_W01: {fileID: 2019028968}
+  light08_W01: {fileID: 186910819}
+  light01_W02: {fileID: 1450491545}
+  light02_W02: {fileID: 1764527904}
+  light03_W02: {fileID: 890549474}
+  light04_W02: {fileID: 745373905}
+  light05_W02: {fileID: 1954112455}
+  light06_W02: {fileID: 820875577}
+  light07_W02: {fileID: 1613703663}
+  light08_W02: {fileID: 1396797864}
+  windowTopOff: {fileID: 1834685424}
+  windowTopBubble: {fileID: 1444035539}
+  windowBottomOff: {fileID: 681093054}
+  windowBottomBubble: {fileID: 577323014}
   prefabToMove: {fileID: 1803096748}
   sensorToActivate: {fileID: 1867472518}
 --- !u!61 &645096615
@@ -5944,7 +5973,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &651137379
 Transform:
   m_ObjectHideFlags: 0
@@ -6379,12 +6408,12 @@ GameObject:
   - component: {fileID: 681093055}
   - component: {fileID: 681093056}
   m_Layer: 0
-  m_Name: Enviro_ScreenOff_bottom
+  m_Name: Enviro_Screen_Off_bottom_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &681093055
 Transform:
   m_ObjectHideFlags: 0
@@ -6463,12 +6492,12 @@ GameObject:
   - component: {fileID: 682908364}
   - component: {fileID: 682908365}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (2)
+  m_Name: Enviro_LightsOut_04 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &682908364
 Transform:
   m_ObjectHideFlags: 0
@@ -6547,7 +6576,7 @@ GameObject:
   - component: {fileID: 736659016}
   - component: {fileID: 736659015}
   m_Layer: 0
-  m_Name: Enviro_ScreenON_top
+  m_Name: Enviro_Bubble_On_top_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6631,12 +6660,12 @@ GameObject:
   - component: {fileID: 745373906}
   - component: {fileID: 745373907}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (3)
+  m_Name: Enviro_LightsOut_03 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &745373906
 Transform:
   m_ObjectHideFlags: 0
@@ -6925,12 +6954,12 @@ GameObject:
   - component: {fileID: 784108708}
   - component: {fileID: 784108709}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_04 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &784108708
 Transform:
   m_ObjectHideFlags: 0
@@ -7009,12 +7038,12 @@ GameObject:
   - component: {fileID: 790206238}
   - component: {fileID: 790206239}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_04
+  m_Name: Enviro_LightsOut_03 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &790206238
 Transform:
   m_ObjectHideFlags: 0
@@ -7094,7 +7123,7 @@ GameObject:
   - component: {fileID: 792320061}
   - component: {fileID: 792320060}
   m_Layer: 0
-  m_Name: GunCharge
+  m_Name: Gun_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7203,7 +7232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &802440087
 Transform:
   m_ObjectHideFlags: 0
@@ -7282,12 +7311,12 @@ GameObject:
   - component: {fileID: 806909852}
   - component: {fileID: 806909853}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_03 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &806909852
 Transform:
   m_ObjectHideFlags: 0
@@ -7366,12 +7395,12 @@ GameObject:
   - component: {fileID: 812350227}
   - component: {fileID: 812350228}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_04
+  m_Name: Enviro_LightsOut_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &812350227
 Transform:
   m_ObjectHideFlags: 0
@@ -7450,12 +7479,12 @@ GameObject:
   - component: {fileID: 820875578}
   - component: {fileID: 820875579}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (5)
+  m_Name: Enviro_LightsOut_03 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &820875578
 Transform:
   m_ObjectHideFlags: 0
@@ -7702,12 +7731,12 @@ GameObject:
   - component: {fileID: 853346270}
   - component: {fileID: 853346271}
   m_Layer: 0
-  m_Name: Enviro_ScreenON_top
+  m_Name: Enviro_Bubble_On_top_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &853346270
 Transform:
   m_ObjectHideFlags: 0
@@ -7838,8 +7867,8 @@ Transform:
   - {fileID: 978499482}
   - {fileID: 1131789038}
   - {fileID: 164581258}
-  - {fileID: 1598341970}
   - {fileID: 1477598282}
+  - {fileID: 1598341970}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7854,7 +7883,7 @@ GameObject:
   - component: {fileID: 857743281}
   - component: {fileID: 857743282}
   m_Layer: 0
-  m_Name: GunPiece
+  m_Name: GunPiece_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8146,7 +8175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &870045982
 Transform:
   m_ObjectHideFlags: 0
@@ -8344,12 +8373,12 @@ GameObject:
   - component: {fileID: 890549475}
   - component: {fileID: 890549476}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (2)
+  m_Name: Enviro_LightsOut_03 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &890549475
 Transform:
   m_ObjectHideFlags: 0
@@ -8689,7 +8718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &928191454
 Transform:
   m_ObjectHideFlags: 0
@@ -8802,6 +8831,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aebae1894ed97343ab5898221521404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuelCan: {fileID: 0}
+  lazer: {fileID: 0}
+  gun: {fileID: 0}
+  crate: {fileID: 0}
+  gunPiece: {fileID: 0}
+  light_L01: {fileID: 0}
+  light_L02: {fileID: 0}
+  light_L03: {fileID: 0}
+  light_L04: {fileID: 0}
+  light01_W01: {fileID: 0}
+  light02_W01: {fileID: 0}
+  light03_W01: {fileID: 0}
+  light04_W01: {fileID: 0}
+  light05_W01: {fileID: 0}
+  light06_W01: {fileID: 0}
+  light07_W01: {fileID: 0}
+  light08_W01: {fileID: 0}
+  light01_W02: {fileID: 0}
+  light02_W02: {fileID: 0}
+  light03_W02: {fileID: 0}
+  light04_W02: {fileID: 0}
+  light05_W02: {fileID: 0}
+  light06_W02: {fileID: 0}
+  light07_W02: {fileID: 0}
+  light08_W02: {fileID: 0}
+  windowTopOff: {fileID: 0}
+  windowTopBubble: {fileID: 0}
+  windowBottomOff: {fileID: 0}
+  windowBottomBubble: {fileID: 0}
   prefabToMove: {fileID: 320141796}
   sensorToActivate: {fileID: 2136451296}
 --- !u!61 &936628307
@@ -8960,7 +9018,7 @@ GameObject:
   - component: {fileID: 959236346}
   - component: {fileID: 959236347}
   m_Layer: 0
-  m_Name: GunPiece
+  m_Name: GunPiece_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9130,7 +9188,7 @@ GameObject:
   - component: {fileID: 978499484}
   - component: {fileID: 978499483}
   m_Layer: 0
-  m_Name: GunBullet
+  m_Name: GunBullet_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9585,7 +9643,7 @@ GameObject:
   - component: {fileID: 1012769637}
   - component: {fileID: 1012769636}
   m_Layer: 0
-  m_Name: GunBullet
+  m_Name: GunBullet_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9814,12 +9872,12 @@ GameObject:
   - component: {fileID: 1039771627}
   - component: {fileID: 1039771628}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (7)
+  m_Name: Enviro_LightsOut_04 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1039771627
 Transform:
   m_ObjectHideFlags: 0
@@ -10022,7 +10080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1083265540
 Transform:
   m_ObjectHideFlags: 0
@@ -10353,12 +10411,12 @@ GameObject:
   - component: {fileID: 1095297001}
   - component: {fileID: 1095297002}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_03
+  m_Name: Enviro_LightsOut_02 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1095297001
 Transform:
   m_ObjectHideFlags: 0
@@ -10556,12 +10614,12 @@ GameObject:
   - component: {fileID: 1103082481}
   - component: {fileID: 1103082482}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (4)
+  m_Name: Enviro_LightsOut_02 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1103082481
 Transform:
   m_ObjectHideFlags: 0
@@ -10724,12 +10782,12 @@ GameObject:
   - component: {fileID: 1120394925}
   - component: {fileID: 1120394926}
   m_Layer: 0
-  m_Name: Enviro_ScreenON_top
+  m_Name: Enviro_Bubble_On_top_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1120394925
 Transform:
   m_ObjectHideFlags: 0
@@ -10813,7 +10871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1129159459
 Transform:
   m_ObjectHideFlags: 0
@@ -10895,7 +10953,7 @@ GameObject:
   - component: {fileID: 1131789040}
   - component: {fileID: 1131789039}
   m_Layer: 0
-  m_Name: FuelCan
+  m_Name: FuelCan_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11144,7 +11202,7 @@ GameObject:
   - component: {fileID: 1136687608}
   - component: {fileID: 1136687607}
   m_Layer: 0
-  m_Name: Lazers
+  m_Name: Lazers_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11278,7 +11336,7 @@ GameObject:
   - component: {fileID: 1145494769}
   - component: {fileID: 1145494770}
   m_Layer: 0
-  m_Name: FuelCan
+  m_Name: FuelCan_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11918,12 +11976,12 @@ GameObject:
   - component: {fileID: 1217811201}
   - component: {fileID: 1217811202}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (4)
+  m_Name: Enviro_LightsOut_02 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1217811201
 Transform:
   m_ObjectHideFlags: 0
@@ -12205,12 +12263,12 @@ GameObject:
   - component: {fileID: 1262965087}
   - component: {fileID: 1262965088}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_04
+  m_Name: Enviro_LightsOut_02 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1262965087
 Transform:
   m_ObjectHideFlags: 0
@@ -12373,7 +12431,7 @@ GameObject:
   - component: {fileID: 1269570180}
   - component: {fileID: 1269570179}
   m_Layer: 0
-  m_Name: GunPiece
+  m_Name: GunPiece_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12462,7 +12520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1270630886
 Transform:
   m_ObjectHideFlags: 0
@@ -12625,12 +12683,12 @@ GameObject:
   - component: {fileID: 1296077598}
   - component: {fileID: 1296077599}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (2)
+  m_Name: Enviro_LightsOut_02 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1296077598
 Transform:
   m_ObjectHideFlags: 0
@@ -12814,7 +12872,7 @@ GameObject:
   - component: {fileID: 1308040745}
   - component: {fileID: 1308040744}
   m_Layer: 0
-  m_Name: Enviro_ScreenOn_bottom
+  m_Name: Enviro_Bubble_On_bottom_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12898,12 +12956,12 @@ GameObject:
   - component: {fileID: 1310966298}
   - component: {fileID: 1310966299}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_01 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1310966298
 Transform:
   m_ObjectHideFlags: 0
@@ -12982,12 +13040,12 @@ GameObject:
   - component: {fileID: 1312777287}
   - component: {fileID: 1312777288}
   m_Layer: 0
-  m_Name: Enviro_ScreenOff_top
+  m_Name: Enviro_Screen_Off_top_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1312777287
 Transform:
   m_ObjectHideFlags: 0
@@ -13066,12 +13124,12 @@ GameObject:
   - component: {fileID: 1329527511}
   - component: {fileID: 1329527512}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_02 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1329527511
 Transform:
   m_ObjectHideFlags: 0
@@ -13150,12 +13208,12 @@ GameObject:
   - component: {fileID: 1331583635}
   - component: {fileID: 1331583636}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_02
+  m_Name: Enviro_LightsOut_03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1331583635
 Transform:
   m_ObjectHideFlags: 0
@@ -13402,12 +13460,12 @@ GameObject:
   - component: {fileID: 1343107105}
   - component: {fileID: 1343107106}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (7)
+  m_Name: Enviro_LightsOut_02 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1343107105
 Transform:
   m_ObjectHideFlags: 0
@@ -13486,7 +13544,7 @@ GameObject:
   - component: {fileID: 1344381397}
   - component: {fileID: 1344381399}
   m_Layer: 0
-  m_Name: Crates
+  m_Name: Crates_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13607,12 +13665,12 @@ GameObject:
   - component: {fileID: 1396797865}
   - component: {fileID: 1396797866}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (7)
+  m_Name: Enviro_LightsOut_03 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1396797865
 Transform:
   m_ObjectHideFlags: 0
@@ -13691,12 +13749,12 @@ GameObject:
   - component: {fileID: 1404089874}
   - component: {fileID: 1404089875}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (5)
+  m_Name: Enviro_LightsOut_04 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1404089874
 Transform:
   m_ObjectHideFlags: 0
@@ -14097,12 +14155,12 @@ GameObject:
   - component: {fileID: 1444035540}
   - component: {fileID: 1444035541}
   m_Layer: 0
-  m_Name: Enviro_ScreenON_top
+  m_Name: Enviro_Bubble_ON_top_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1444035540
 Transform:
   m_ObjectHideFlags: 0
@@ -14181,12 +14239,12 @@ GameObject:
   - component: {fileID: 1450491546}
   - component: {fileID: 1450491547}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_03 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1450491546
 Transform:
   m_ObjectHideFlags: 0
@@ -14350,7 +14408,7 @@ GameObject:
   - component: {fileID: 1477598282}
   - component: {fileID: 1477598283}
   m_Layer: 0
-  m_Name: Crates
+  m_Name: Crates_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14733,7 +14791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1517673340
 Transform:
   m_ObjectHideFlags: 0
@@ -14851,12 +14909,12 @@ GameObject:
   - component: {fileID: 1533129362}
   - component: {fileID: 1533129363}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_04
+  m_Name: Enviro_LightsOut_04 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1533129362
 Transform:
   m_ObjectHideFlags: 0
@@ -14935,12 +14993,12 @@ GameObject:
   - component: {fileID: 1536977249}
   - component: {fileID: 1536977250}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (3)
+  m_Name: Enviro_LightsOut_03 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1536977249
 Transform:
   m_ObjectHideFlags: 0
@@ -15052,7 +15110,7 @@ GameObject:
   - component: {fileID: 1548478321}
   - component: {fileID: 1548478320}
   m_Layer: 0
-  m_Name: GunCharge
+  m_Name: Gun_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15261,12 +15319,12 @@ GameObject:
   - component: {fileID: 1549436364}
   - component: {fileID: 1549436365}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (7)
+  m_Name: Enviro_LightsOut_04 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1549436364
 Transform:
   m_ObjectHideFlags: 0
@@ -15345,7 +15403,7 @@ GameObject:
   - component: {fileID: 1551460692}
   - component: {fileID: 1551460693}
   m_Layer: 0
-  m_Name: GunPiece
+  m_Name: GunPiece_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15708,7 +15766,7 @@ GameObject:
   - component: {fileID: 1596421498}
   - component: {fileID: 1596421501}
   m_Layer: 0
-  m_Name: Lazers
+  m_Name: Lazers_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15873,6 +15931,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aebae1894ed97343ab5898221521404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuelCan: {fileID: 1145494765}
+  lazer: {fileID: 1596421497}
+  gun: {fileID: 140340280}
+  crate: {fileID: 1344381396}
+  gunPiece: {fileID: 1269570178}
+  light_L01: {fileID: 1619543052}
+  light_L02: {fileID: 2004425340}
+  light_L03: {fileID: 2014873231}
+  light_L04: {fileID: 812350226}
+  light01_W01: {fileID: 1310966297}
+  light02_W01: {fileID: 1640097799}
+  light03_W01: {fileID: 1820647154}
+  light04_W01: {fileID: 651137378}
+  light05_W01: {fileID: 928191453}
+  light06_W01: {fileID: 802440086}
+  light07_W01: {fileID: 1083265539}
+  light08_W01: {fileID: 247724492}
+  light01_W02: {fileID: 1941144356}
+  light02_W02: {fileID: 124333745}
+  light03_W02: {fileID: 1788285391}
+  light04_W02: {fileID: 1129159458}
+  light05_W02: {fileID: 1517673339}
+  light06_W02: {fileID: 870045981}
+  light07_W02: {fileID: 1270630885}
+  light08_W02: {fileID: 162665069}
+  windowTopOff: {fileID: 321069005}
+  windowTopBubble: {fileID: 736659014}
+  windowBottomOff: {fileID: 1800014962}
+  windowBottomBubble: {fileID: 1308040743}
   prefabToMove: {fileID: 1628080163}
   sensorToActivate: {fileID: 1768199046}
 --- !u!61 &1598341972
@@ -15912,12 +15999,12 @@ GameObject:
   - component: {fileID: 1608130500}
   - component: {fileID: 1608130501}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (3)
+  m_Name: Enviro_LightsOut_02 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1608130500
 Transform:
   m_ObjectHideFlags: 0
@@ -15996,12 +16083,12 @@ GameObject:
   - component: {fileID: 1613703664}
   - component: {fileID: 1613703665}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (6)
+  m_Name: Enviro_LightsOut_03 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1613703664
 Transform:
   m_ObjectHideFlags: 0
@@ -16080,12 +16167,12 @@ GameObject:
   - component: {fileID: 1619543053}
   - component: {fileID: 1619543054}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_01 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1619543053
 Transform:
   m_ObjectHideFlags: 0
@@ -16164,12 +16251,12 @@ GameObject:
   - component: {fileID: 1620120792}
   - component: {fileID: 1620120793}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (3)
+  m_Name: Enviro_LightsOut_02 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1620120792
 Transform:
   m_ObjectHideFlags: 0
@@ -16274,8 +16361,8 @@ Transform:
   - {fileID: 1903149355}
   - {fileID: 1145494766}
   - {fileID: 1596421500}
-  - {fileID: 1768199047}
   - {fileID: 1344381397}
+  - {fileID: 1768199047}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16405,7 +16492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1640097800
 Transform:
   m_ObjectHideFlags: 0
@@ -16536,8 +16623,8 @@ Transform:
   - {fileID: 1012769635}
   - {fileID: 28746165}
   - {fileID: 1136687606}
-  - {fileID: 645096613}
   - {fileID: 1993772126}
+  - {fileID: 645096613}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16552,12 +16639,12 @@ GameObject:
   - component: {fileID: 1657658285}
   - component: {fileID: 1657658286}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (6)
+  m_Name: Enviro_LightsOut_04 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1657658285
 Transform:
   m_ObjectHideFlags: 0
@@ -16917,7 +17004,7 @@ GameObject:
   - component: {fileID: 1699292747}
   - component: {fileID: 1699292746}
   m_Layer: 0
-  m_Name: GunBullet
+  m_Name: GunBullet_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17226,12 +17313,12 @@ GameObject:
   - component: {fileID: 1764527905}
   - component: {fileID: 1764527906}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (1)
+  m_Name: Enviro_LightsOut_03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1764527905
 Transform:
   m_ObjectHideFlags: 0
@@ -17344,6 +17431,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aebae1894ed97343ab5898221521404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuelCan: {fileID: 28746164}
+  lazer: {fileID: 1136687605}
+  gun: {fileID: 2036537841}
+  crate: {fileID: 1993772125}
+  gunPiece: {fileID: 959236345}
+  light_L01: {fileID: 558509271}
+  light_L02: {fileID: 2145932630}
+  light_L03: {fileID: 1858724079}
+  light_L04: {fileID: 1533129361}
+  light01_W01: {fileID: 336873947}
+  light02_W01: {fileID: 2128769522}
+  light03_W01: {fileID: 682908363}
+  light04_W01: {fileID: 1883176400}
+  light05_W01: {fileID: 2017610702}
+  light06_W01: {fileID: 1404089873}
+  light07_W01: {fileID: 373937015}
+  light08_W01: {fileID: 1549436363}
+  light01_W02: {fileID: 784108707}
+  light02_W02: {fileID: 462428038}
+  light03_W02: {fileID: 1891476938}
+  light04_W02: {fileID: 2082541913}
+  light05_W02: {fileID: 211235286}
+  light06_W02: {fileID: 1960047265}
+  light07_W02: {fileID: 1657658284}
+  light08_W02: {fileID: 1039771626}
+  windowTopOff: {fileID: 1312777286}
+  windowTopBubble: {fileID: 1120394924}
+  windowBottomOff: {fileID: 1948978019}
+  windowBottomBubble: {fileID: 430670917}
   prefabToMove: {fileID: 1657655658}
   sensorToActivate: {fileID: 645096612}
 --- !u!61 &1768199049
@@ -17502,12 +17618,12 @@ GameObject:
   - component: {fileID: 1769763054}
   - component: {fileID: 1769763055}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (1)
+  m_Name: Enviro_LightsOut_03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1769763054
 Transform:
   m_ObjectHideFlags: 0
@@ -17591,7 +17707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1788285392
 Transform:
   m_ObjectHideFlags: 0
@@ -17775,12 +17891,12 @@ GameObject:
   - component: {fileID: 1799990241}
   - component: {fileID: 1799990242}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (6)
+  m_Name: Enviro_LightsOut_02 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1799990241
 Transform:
   m_ObjectHideFlags: 0
@@ -17859,7 +17975,7 @@ GameObject:
   - component: {fileID: 1800014964}
   - component: {fileID: 1800014963}
   m_Layer: 0
-  m_Name: Enviro_ScreenOff_bottom
+  m_Name: Enviro_Screen_Off_bottom_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17995,8 +18111,8 @@ Transform:
   - {fileID: 1699292745}
   - {fileID: 1885859245}
   - {fileID: 607741873}
-  - {fileID: 1867472519}
   - {fileID: 57338896}
+  - {fileID: 1867472519}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18016,7 +18132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1820647155
 Transform:
   m_ObjectHideFlags: 0
@@ -18095,12 +18211,12 @@ GameObject:
   - component: {fileID: 1834685425}
   - component: {fileID: 1834685426}
   m_Layer: 0
-  m_Name: Enviro_ScreenOff_top
+  m_Name: Enviro_Screen_Off_top_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1834685425
 Transform:
   m_ObjectHideFlags: 0
@@ -18263,12 +18379,12 @@ GameObject:
   - component: {fileID: 1858724080}
   - component: {fileID: 1858724081}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_03
+  m_Name: Enviro_LightsOut_04 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1858724080
 Transform:
   m_ObjectHideFlags: 0
@@ -18347,12 +18463,12 @@ GameObject:
   - component: {fileID: 1861279697}
   - component: {fileID: 1861279698}
   m_Layer: 0
-  m_Name: Enviro_ScreenOn_bottom
+  m_Name: Enviro_Bubble_On_bottom_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1861279697
 Transform:
   m_ObjectHideFlags: 0
@@ -18465,6 +18581,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aebae1894ed97343ab5898221521404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuelCan: {fileID: 1131789037}
+  lazer: {fileID: 164581257}
+  gun: {fileID: 792320058}
+  crate: {fileID: 1477598281}
+  gunPiece: {fileID: 1551460691}
+  light_L01: {fileID: 1913560841}
+  light_L02: {fileID: 300535472}
+  light_L03: {fileID: 1095297000}
+  light_L04: {fileID: 1262965086}
+  light01_W01: {fileID: 1329527510}
+  light02_W01: {fileID: 1931667313}
+  light03_W01: {fileID: 1296077597}
+  light04_W01: {fileID: 1620120791}
+  light05_W01: {fileID: 1103082480}
+  light06_W01: {fileID: 102177141}
+  light07_W01: {fileID: 17141551}
+  light08_W01: {fileID: 1343107104}
+  light01_W02: {fileID: 2061858801}
+  light02_W02: {fileID: 1129120}
+  light03_W02: {fileID: 2045421939}
+  light04_W02: {fileID: 1608130499}
+  light05_W02: {fileID: 1217811200}
+  light06_W02: {fileID: 1911627376}
+  light07_W02: {fileID: 1799990240}
+  light08_W02: {fileID: 2087544527}
+  windowTopOff: {fileID: 517114612}
+  windowTopBubble: {fileID: 853346269}
+  windowBottomOff: {fileID: 177054736}
+  windowBottomBubble: {fileID: 1861279696}
   prefabToMove: {fileID: 854953361}
   sensorToActivate: {fileID: 1598341969}
 --- !u!61 &1867472521
@@ -18590,12 +18735,12 @@ GameObject:
   - component: {fileID: 1883176401}
   - component: {fileID: 1883176402}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (3)
+  m_Name: Enviro_LightsOut_04 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1883176401
 Transform:
   m_ObjectHideFlags: 0
@@ -18674,12 +18819,12 @@ GameObject:
   - component: {fileID: 1884291098}
   - component: {fileID: 1884291099}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (4)
+  m_Name: Enviro_LightsOut_03 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1884291098
 Transform:
   m_ObjectHideFlags: 0
@@ -18761,7 +18906,7 @@ GameObject:
   - component: {fileID: 1885859247}
   - component: {fileID: 1885859246}
   m_Layer: 0
-  m_Name: FuelCan
+  m_Name: FuelCan_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18923,12 +19068,12 @@ GameObject:
   - component: {fileID: 1891476939}
   - component: {fileID: 1891476940}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (2)
+  m_Name: Enviro_LightsOut_04 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1891476939
 Transform:
   m_ObjectHideFlags: 0
@@ -19009,7 +19154,7 @@ GameObject:
   - component: {fileID: 1903149353}
   - component: {fileID: 1903149356}
   m_Layer: 0
-  m_Name: GunBullet
+  m_Name: GunBullet_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19154,12 +19299,12 @@ GameObject:
   - component: {fileID: 1911627377}
   - component: {fileID: 1911627378}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (5)
+  m_Name: Enviro_LightsOut_02 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1911627377
 Transform:
   m_ObjectHideFlags: 0
@@ -19238,12 +19383,12 @@ GameObject:
   - component: {fileID: 1913560842}
   - component: {fileID: 1913560843}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_02 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1913560842
 Transform:
   m_ObjectHideFlags: 0
@@ -19439,12 +19584,12 @@ GameObject:
   - component: {fileID: 1931667314}
   - component: {fileID: 1931667315}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (1)
+  m_Name: Enviro_LightsOut_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1931667314
 Transform:
   m_ObjectHideFlags: 0
@@ -19523,12 +19668,12 @@ GameObject:
   - component: {fileID: 1941144357}
   - component: {fileID: 1941144358}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_01 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1941144357
 Transform:
   m_ObjectHideFlags: 0
@@ -19691,12 +19836,12 @@ GameObject:
   - component: {fileID: 1948978020}
   - component: {fileID: 1948978021}
   m_Layer: 0
-  m_Name: Enviro_ScreenOff_bottom
+  m_Name: Enviro_Screen_Off_bottom_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1948978020
 Transform:
   m_ObjectHideFlags: 0
@@ -19775,12 +19920,12 @@ GameObject:
   - component: {fileID: 1954112456}
   - component: {fileID: 1954112457}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (4)
+  m_Name: Enviro_LightsOut_03 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1954112456
 Transform:
   m_ObjectHideFlags: 0
@@ -19859,12 +20004,12 @@ GameObject:
   - component: {fileID: 1960047266}
   - component: {fileID: 1960047267}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (5)
+  m_Name: Enviro_LightsOut_04 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1960047266
 Transform:
   m_ObjectHideFlags: 0
@@ -20017,7 +20162,7 @@ GameObject:
   - component: {fileID: 1993772126}
   - component: {fileID: 1993772127}
   m_Layer: 0
-  m_Name: Crates
+  m_Name: Crates_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20141,12 +20286,12 @@ GameObject:
   - component: {fileID: 2004425342}
   - component: {fileID: 2004425341}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_02
+  m_Name: Enviro_LightsOut_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2004425341
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20225,12 +20370,12 @@ GameObject:
   - component: {fileID: 2014873233}
   - component: {fileID: 2014873232}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_03
+  m_Name: Enviro_LightsOut_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2014873232
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20309,12 +20454,12 @@ GameObject:
   - component: {fileID: 2017610703}
   - component: {fileID: 2017610704}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (4)
+  m_Name: Enviro_LightsOut_04 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2017610703
 Transform:
   m_ObjectHideFlags: 0
@@ -20393,12 +20538,12 @@ GameObject:
   - component: {fileID: 2019028969}
   - component: {fileID: 2019028970}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (6)
+  m_Name: Enviro_LightsOut_03 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2019028969
 Transform:
   m_ObjectHideFlags: 0
@@ -20478,7 +20623,7 @@ GameObject:
   - component: {fileID: 2036537844}
   - component: {fileID: 2036537843}
   m_Layer: 0
-  m_Name: GunCharge
+  m_Name: Gun_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20582,12 +20727,12 @@ GameObject:
   - component: {fileID: 2045421940}
   - component: {fileID: 2045421941}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (2)
+  m_Name: Enviro_LightsOut_02 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2045421940
 Transform:
   m_ObjectHideFlags: 0
@@ -20855,12 +21000,12 @@ GameObject:
   - component: {fileID: 2061858802}
   - component: {fileID: 2061858803}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01
+  m_Name: Enviro_LightsOut_02 (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2061858802
 Transform:
   m_ObjectHideFlags: 0
@@ -21125,12 +21270,12 @@ GameObject:
   - component: {fileID: 2082541914}
   - component: {fileID: 2082541915}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (3)
+  m_Name: Enviro_LightsOut_04 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2082541914
 Transform:
   m_ObjectHideFlags: 0
@@ -21209,12 +21354,12 @@ GameObject:
   - component: {fileID: 2087544528}
   - component: {fileID: 2087544529}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (7)
+  m_Name: Enviro_LightsOut_02 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2087544528
 Transform:
   m_ObjectHideFlags: 0
@@ -21377,12 +21522,12 @@ GameObject:
   - component: {fileID: 2128769523}
   - component: {fileID: 2128769524}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_01 (1)
+  m_Name: Enviro_LightsOut_04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2128769523
 Transform:
   m_ObjectHideFlags: 0
@@ -21495,6 +21640,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aebae1894ed97343ab5898221521404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuelCan: {fileID: 0}
+  lazer: {fileID: 0}
+  gun: {fileID: 0}
+  crate: {fileID: 0}
+  gunPiece: {fileID: 0}
+  light_L01: {fileID: 0}
+  light_L02: {fileID: 0}
+  light_L03: {fileID: 0}
+  light_L04: {fileID: 0}
+  light01_W01: {fileID: 0}
+  light02_W01: {fileID: 0}
+  light03_W01: {fileID: 0}
+  light04_W01: {fileID: 0}
+  light05_W01: {fileID: 0}
+  light06_W01: {fileID: 0}
+  light07_W01: {fileID: 0}
+  light08_W01: {fileID: 0}
+  light01_W02: {fileID: 0}
+  light02_W02: {fileID: 0}
+  light03_W02: {fileID: 0}
+  light04_W02: {fileID: 0}
+  light05_W02: {fileID: 0}
+  light06_W02: {fileID: 0}
+  light07_W02: {fileID: 0}
+  light08_W02: {fileID: 0}
+  windowTopOff: {fileID: 0}
+  windowTopBubble: {fileID: 0}
+  windowBottomOff: {fileID: 0}
+  windowBottomBubble: {fileID: 0}
   prefabToMove: {fileID: 1628080163}
   sensorToActivate: {fileID: 1768199046}
 --- !u!61 &2136451299
@@ -21534,12 +21708,12 @@ GameObject:
   - component: {fileID: 2145932631}
   - component: {fileID: 2145932632}
   m_Layer: 0
-  m_Name: Enviro_LightsOut_02
+  m_Name: Enviro_LightsOut_04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2145932631
 Transform:
   m_ObjectHideFlags: 0
