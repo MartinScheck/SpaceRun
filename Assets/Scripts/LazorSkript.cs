@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LazorSkript : MonoBehaviour
 {
+    public HeroScript hero;
 
     // Start is called before the first frame update
     void Start()
