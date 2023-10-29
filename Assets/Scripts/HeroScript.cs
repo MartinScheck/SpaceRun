@@ -23,6 +23,13 @@ public class HeroScript : MonoBehaviour
     public GameObject respawnPoint;
     public Text healthText, scoreText;
     private bool blockControls;
+    public AudioSource heroAudio;
+    public List<AudioClip> heroAudioClip;
+    private float time = 0;
+    private bool leftfoot = true;
+    private bool heroDmgOn;
+    public float heroDmgDelay;
+    private float dmgTimeCounter;
     void Start()
     {
         oldHeroPosition = 0;
@@ -36,13 +43,16 @@ public class HeroScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
         anim = GetComponent<Animator>();
+        heroAudio = GetComponent<AudioSource>();
         onGround = true;
+        heroDmgDelay = 2.0f;
         respawn();
     }
 
     public void increaseHealth()
     {
         health = health + 10;
+        heroAudio.PlayOneShot(heroAudioClip[6]);
         if (health >= 100)
         {
             health = 100;
@@ -54,14 +64,16 @@ public class HeroScript : MonoBehaviour
 
     public void decreaseHealth()
     {
-        health = health - 30;
-       
+        health = health - 10;
+        heroAudio.PlayOneShot(heroAudioClip[7]);
+        anim.SetTrigger("Dmg");
         if (health <= 0)
         {
             health = 0;
           
-            lives--;
-            if(lives <= 0)
+            lives--; 
+            
+            if (lives <= 0)
             {
                 livesbar.Hurt(1);
                 lives = 0;
@@ -153,9 +165,12 @@ public class HeroScript : MonoBehaviour
         transform.position = new Vector3(respawnPoint.transform.position.x , respawnPoint.transform.position.y, respawnPoint.transform.position.z);
         transform.localScale = new Vector3(1f, 1f, 1f);
         blockControls = false;
+        heroAudio.PlayOneShot(heroAudioClip[5]);
+        heroDmgOn = true;
     }
     public void gameOver()
     {
+        heroAudio.PlayOneShot(heroAudioClip[8]);
         Debug.Log("GAME OVER");
     }
     // Update is called once per frame
@@ -169,16 +184,23 @@ public class HeroScript : MonoBehaviour
             rb.AddForce(new Vector2(0f, 9.0f), ForceMode2D.Impulse);
             onGround = false;
             anim.SetTrigger("Jump"); // jump animation
+            
+            heroAudio.PlayOneShot(heroAudioClip[3]);
 
         }
         if (Input.GetKeyUp("right") || Input.GetKeyUp("left"))
         {
+<<<<<<< HEAD
+            //heroAudio.PlayOneShot(heroAudioClip[2]);
+=======
+>>>>>>> 32db2b7dd1ba5377c50f8d126f09802039234038
             transitionState = 1;
             anim.SetInteger("Trans", transitionState); // stand animation
 
         }
         if (Input.GetKeyDown("down") && onGround == true)
         {
+            heroAudio.PlayOneShot(heroAudioClip[4]);
             decreaseHealth();
             onGround = true;
 
@@ -188,7 +210,12 @@ public class HeroScript : MonoBehaviour
 
     void FixedUpdate()
     {
+<<<<<<< HEAD
+        time = time + Time.deltaTime;
+        dmgTimeCounter = dmgTimeCounter + Time.deltaTime;
+=======
 
+>>>>>>> 32db2b7dd1ba5377c50f8d126f09802039234038
         if (Input.GetKey("right") && blockControls == false)
         {
             currentHeroPosition = gameObject.transform.position.x;
@@ -198,25 +225,68 @@ public class HeroScript : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
             transitionState = 2;
             anim.SetInteger("Trans", transitionState); // run animation right
+            
+            if (time >= 0.5f && onGround == true)
+            {
+                Footstepsound();
+                time = 0;
+            }
         }
         if (Input.GetKey("left") && blockControls == false)
         {
+<<<<<<< HEAD
+            
+=======
             currentHeroPosition = gameObject.transform.position.x;
+>>>>>>> 32db2b7dd1ba5377c50f8d126f09802039234038
             float distanceToMove = speed * Time.deltaTime;
             transform.position = new Vector3(transform.position.x - distanceToMove, transform.position.y, transform.position.z);
             
             transform.localScale = new Vector3(-1f, 1f, 1f);
             transitionState = 2;
             anim.SetInteger("Trans", transitionState); // run animation left
+
+            if (time >= 0.5f && onGround == true)
+            {
+                Footstepsound();
+                time = 0;
+            }
         }
 
+        if (dmgTimeCounter >= heroDmgDelay)
+        {
+            heroDmgOn = true;
+            time = 0;
+        }
+        else
+        {
+            heroDmgOn = false;
+        }
+
+
+    }
+
+    private void Footstepsound()
+    {
+        if (leftfoot)
+        {
+            heroAudio.PlayOneShot(heroAudioClip[0]);
+            leftfoot = false;
+        }
+        else
+        {
+            heroAudio.PlayOneShot(heroAudioClip[1]);
+            leftfoot = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+       
        onGround = true;
        transitionState = 1;
        anim.SetInteger("Trans", transitionState); // stand animation
+       //heroAudio.PlayOneShot(heroAudioClip[2]);
 
     }
 

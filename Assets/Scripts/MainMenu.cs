@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject buttonStart;
     public GameObject buttonOption;
+    public AudioSource menuaudio;
 
     void Start()
     {
@@ -18,7 +19,8 @@ public class MainMenu : MonoBehaviour
 
 
     public void StartGame()
-    {
+    {   
+        menuaudio.Stop();
         SceneManager.LoadScene("GameScene");
     }
 
