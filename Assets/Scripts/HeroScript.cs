@@ -190,10 +190,7 @@ public class HeroScript : MonoBehaviour
         }
         if (Input.GetKeyUp("right") || Input.GetKeyUp("left"))
         {
-<<<<<<< HEAD
             //heroAudio.PlayOneShot(heroAudioClip[2]);
-=======
->>>>>>> 32db2b7dd1ba5377c50f8d126f09802039234038
             transitionState = 1;
             anim.SetInteger("Trans", transitionState); // stand animation
 
@@ -210,12 +207,9 @@ public class HeroScript : MonoBehaviour
 
     void FixedUpdate()
     {
-<<<<<<< HEAD
         time = time + Time.deltaTime;
         dmgTimeCounter = dmgTimeCounter + Time.deltaTime;
-=======
 
->>>>>>> 32db2b7dd1ba5377c50f8d126f09802039234038
         if (Input.GetKey("right") && blockControls == false)
         {
             currentHeroPosition = gameObject.transform.position.x;
@@ -234,11 +228,9 @@ public class HeroScript : MonoBehaviour
         }
         if (Input.GetKey("left") && blockControls == false)
         {
-<<<<<<< HEAD
-            
-=======
+
             currentHeroPosition = gameObject.transform.position.x;
->>>>>>> 32db2b7dd1ba5377c50f8d126f09802039234038
+
             float distanceToMove = speed * Time.deltaTime;
             transform.position = new Vector3(transform.position.x - distanceToMove, transform.position.y, transform.position.z);
             
