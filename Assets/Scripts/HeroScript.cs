@@ -40,16 +40,6 @@ public class HeroScript : MonoBehaviour
         respawn();
     }
 
-    public int getHealth()
-    {
-        return health;
-    }
-  
-    public int getLives()
-    {
-        return lives;
-    }
-
     public void increaseHealth()
     {
         health = health + 10;
@@ -229,5 +219,20 @@ public class HeroScript : MonoBehaviour
        anim.SetInteger("Trans", transitionState); // stand animation
 
     }
-    
+
+    public int getHealth()
+    {
+        return health;
+    }
+
+    public int getLives()
+    {
+        return lives;
+    }
+
+    public int getScore()
+    {
+        return score;
+    }
+
 }
