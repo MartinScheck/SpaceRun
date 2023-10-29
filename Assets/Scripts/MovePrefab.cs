@@ -102,7 +102,7 @@ public class MovePrefab : MonoBehaviour
         crate.transform.position = cratePosition;
 
         gun.transform.position = new Vector3(gunRange, gun.transform.position.y, gun.transform.position.z);
-        gunPiece.transform.position = new Vector3(gunRange, gunPiece.transform.position.y, gunPiece.transform.position.z);
+        gunPiece.transform.position = new Vector3(gunRange + 1.245683f, gunPiece.transform.position.y, gunPiece.transform.position.z);
 
         sensorToActivate.SetActive(true);
     }
