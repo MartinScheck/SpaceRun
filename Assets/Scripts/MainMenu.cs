@@ -8,16 +8,22 @@ public class MainMenu : MonoBehaviour
 {
 
     public GameObject buttonStart;
+    public GameObject buttonOption;
 
     void Start()
     {
         buttonStart.GetComponent<Button>().onClick.AddListener(StartGame);
+        buttonOption.GetComponent<Button>().onClick.AddListener(Options);
     }
 
 
     public void StartGame()
     {
-        Debug.Log("ButtonPressed");
         SceneManager.LoadScene("GameScene");
+    }
+
+    public void Options()
+    {
+        SceneManager.LoadScene("OptionScene");
     }
 }
