@@ -160,7 +160,7 @@ public class HeroScript : MonoBehaviour
 
     private void activateKey()
     {
-        if(score == 100)
+        if(score == 500)
         {
             int randomValue = (int) Random.Range(currentHeroPosition, currentHeroPosition *2);
             key.transform.position = new Vector3(currentHeroPosition + randomValue, key.transform.position.y, key.transform.position.z);
