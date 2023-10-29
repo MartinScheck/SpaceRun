@@ -282,7 +282,7 @@ public class HeroScript : MonoBehaviour
 
     public void playKeyCollectSound()
     {
-        heroAudio.PlayOneShot(heroAudioClip[6]);
+        heroAudio.PlayOneShot(heroAudioClip[9]);
     }
 
     public int getHealth()
