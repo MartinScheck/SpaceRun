@@ -9,12 +9,19 @@ public class HeroScript : MonoBehaviour
     public float speed;
     private static int health;
     private static int lives;
+    private static int score;
+
+    private static int maxScore;
+
+    private float currentHeroPosition;
+    private float oldHeroPosition;
+
     public HealthBarHUDTester livesbar;
     private Animator anim;
     private int transitionState;
     private Rigidbody2D rb;
     public GameObject respawnPoint;
-    public Text healthText;
+    public Text healthText, scoreText;
     private bool blockControls;
     public AudioSource heroAudio;
     public List<AudioClip> heroAudioClip;
@@ -25,7 +32,10 @@ public class HeroScript : MonoBehaviour
     private float dmgTimeCounter;
     void Start()
     {
-        
+        oldHeroPosition = 0;
+        maxScore = 0;
+        score = -5;
+
         health = 100;
         speed = 10.0f;
         lives = 3;
@@ -63,6 +73,7 @@ public class HeroScript : MonoBehaviour
             health = 100;
         }
         Debug.Log("Health is: " + health);
+        setHealthColor();
         healthText.text = health + "";
     }
 
@@ -88,7 +99,8 @@ public class HeroScript : MonoBehaviour
             else
             {
                 blockControls = true;
-                health = 100;   
+                health = 100;
+                setHealthColor();
                 healthText.text = health + "";
                 Debug.Log("Lives decrease, health restored");
                 livesbar.Hurt(1);
@@ -102,11 +114,65 @@ public class HeroScript : MonoBehaviour
         else
         {
             Debug.Log("Health reduced");
+            setHealthColor();
             healthText.text = health + "";
         }
-        
-        
     }
+
+    private void setHealthColor()
+    {
+        if(health >= 75)
+        {
+            healthText.color = Color.green;
+        }
+        if(health < 75 && health >= 30)
+        {
+            healthText.color = Color.yellow;
+        }
+        if(health < 30)
+        {
+            healthText.color = Color.red;
+        }
+    }
+
+    private void setScoreColor()
+    {
+        if (score <= 1000)
+        {
+            scoreText.color = Color.white;
+        }
+        if (score < 1000 && score >= 10000)
+        {
+            scoreText.color = Color.yellow;
+        }
+        if (score <= 10000 && score >= 100000)
+        {
+            scoreText.color = Color.cyan;
+        }
+    }
+
+    public void increaseScore()
+    {
+
+        if(maxScore <= currentHeroPosition)
+        {
+            if(maxScore < 0)
+            {
+                score = 0;
+            }
+            else
+            {
+                if(currentHeroPosition > oldHeroPosition)
+                {
+                    score = (int)currentHeroPosition;
+                    setScoreColor();
+                    scoreText.text = score + "";
+                    oldHeroPosition = currentHeroPosition;
+                }
+            }
+        }
+    }
+
     public void respawn()
     {
         Debug.Log("RESPAWN");
@@ -139,7 +205,10 @@ public class HeroScript : MonoBehaviour
         }
         if (Input.GetKeyUp("right") || Input.GetKeyUp("left"))
         {
+<<<<<<< HEAD
             //heroAudio.PlayOneShot(heroAudioClip[2]);
+=======
+>>>>>>> 32db2b7dd1ba5377c50f8d126f09802039234038
             transitionState = 1;
             anim.SetInteger("Trans", transitionState); // stand animation
 
@@ -156,11 +225,16 @@ public class HeroScript : MonoBehaviour
 
     void FixedUpdate()
     {
+<<<<<<< HEAD
         time = time + Time.deltaTime;
         dmgTimeCounter = dmgTimeCounter + Time.deltaTime;
+=======
+
+>>>>>>> 32db2b7dd1ba5377c50f8d126f09802039234038
         if (Input.GetKey("right") && blockControls == false)
         {
-
+            currentHeroPosition = gameObject.transform.position.x;
+            increaseScore();
             float distanceToMove = speed * Time.deltaTime;
             transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
             transform.localScale = new Vector3(1f, 1f, 1f);
@@ -175,7 +249,11 @@ public class HeroScript : MonoBehaviour
         }
         if (Input.GetKey("left") && blockControls == false)
         {
+<<<<<<< HEAD
             
+=======
+            currentHeroPosition = gameObject.transform.position.x;
+>>>>>>> 32db2b7dd1ba5377c50f8d126f09802039234038
             float distanceToMove = speed * Time.deltaTime;
             transform.position = new Vector3(transform.position.x - distanceToMove, transform.position.y, transform.position.z);
             
