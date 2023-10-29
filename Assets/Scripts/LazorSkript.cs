@@ -38,6 +38,7 @@ public class LazorSkript : MonoBehaviour
         if (collision.CompareTag("Hero"))
         {
             dmgOn = true;
+            lazerAudioSource.PlayOneShot(lazerclip);
         }
     }
   
@@ -49,7 +50,7 @@ public class LazorSkript : MonoBehaviour
             dmgOn = false;
             timeSinceLastDamage = 0.0f;
             hero.decreaseHealth();
-            lazerAudioSource.PlayOneShot(lazerclip);
+            
 
         }
     }
