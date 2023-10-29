@@ -45,7 +45,7 @@ public class HeroScript : MonoBehaviour
         anim = GetComponent<Animator>();
         heroAudio = GetComponent<AudioSource>();
         onGround = true;
-        heroDmgDelay = 2.0f;
+        heroDmgDelay = 1.0f;
         respawn();
     }
 
@@ -65,12 +65,11 @@ public class HeroScript : MonoBehaviour
     public void decreaseHealth()
     {
         health = health - 10;
-        heroAudio.PlayOneShot(heroAudioClip[7]);
-        anim.SetTrigger("Dmg");
+        heroDmgOn = false;
+        
         if (health <= 0)
         {
             health = 0;
-          
             lives--; 
             
             if (lives <= 0)
@@ -98,7 +97,8 @@ public class HeroScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Health reduced");
+            anim.SetTrigger("Dmg");
+            heroAudio.PlayOneShot(heroAudioClip[7]);
             setHealthColor();
             healthText.text = health + "";
         }
@@ -248,14 +248,9 @@ public class HeroScript : MonoBehaviour
         if (dmgTimeCounter >= heroDmgDelay)
         {
             heroDmgOn = true;
-            time = 0;
+            dmgTimeCounter = 0;
         }
-        else
-        {
-            heroDmgOn = false;
-        }
-
-
+        
     }
 
     private void Footstepsound()
@@ -299,7 +294,7 @@ public class HeroScript : MonoBehaviour
 
     public bool getHeroDmgOn()
     {
-        return false;
+        return heroDmgOn;
     }
 
 }

@@ -15,8 +15,17 @@ public class LazorSkript : MonoBehaviour
     {
         if(hero.getHeroDmgOn())
         {
-            //hero.decreaseHealth();
+            
+            hero.decreaseHealth();
         }
          
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (hero.getHeroDmgOn())
+        {
+
+            hero.decreaseHealth();
+        }
     }
 }
