@@ -297,4 +297,9 @@ public class HeroScript : MonoBehaviour
         return score;
     }
 
+    public bool getHeroDmgOn()
+    {
+        return false;
+    }
+
 }
