@@ -28,9 +28,6 @@ public class HeroScript : MonoBehaviour
     public List<AudioClip> heroAudioClip;
     private float time = 0;
     private bool leftfoot = true;
-    private bool heroDmgOn;
-    public float heroDmgDelay;
-    private float dmgTimeCounter;
     void Start()
     {
         oldHeroPosition = 0;
@@ -46,7 +43,6 @@ public class HeroScript : MonoBehaviour
         anim = GetComponent<Animator>();
         heroAudio = GetComponent<AudioSource>();
         onGround = true;
-        heroDmgDelay = 1.0f;
         respawn();
     }
 
@@ -66,7 +62,7 @@ public class HeroScript : MonoBehaviour
     public void decreaseHealth()
     {
         health = health - 10;
-        heroDmgOn = false;
+        
         
         if (health <= 0)
         {
@@ -174,13 +170,13 @@ public class HeroScript : MonoBehaviour
 
     public void respawn()
     {
-       // Debug.Log("RESPAWN");
-       // anim.SetTrigger("Respawn");
-       // transform.position = new Vector3(respawnPoint.transform.position.x , respawnPoint.transform.position.y, respawnPoint.transform.position.z);
-        //transform.localScale = new Vector3(1f, 1f, 1f);
-        //blockControls = false;
-        //heroAudio.PlayOneShot(heroAudioClip[5]);
-        //heroDmgOn = true;
+        Debug.Log("RESPAWN");
+        anim.SetTrigger("Respawn");
+        transform.position = new Vector3(respawnPoint.transform.position.x , respawnPoint.transform.position.y, respawnPoint.transform.position.z);
+        transform.localScale = new Vector3(1f, 1f, 1f);
+        blockControls = false;
+        heroAudio.PlayOneShot(heroAudioClip[5]);
+       
     }
     public void gameOver()
     {
@@ -222,7 +218,6 @@ public class HeroScript : MonoBehaviour
     void FixedUpdate()
     {
         time = time + Time.deltaTime;
-        dmgTimeCounter = dmgTimeCounter + Time.deltaTime;
 
         if (Input.GetKey("right") && blockControls == false)
         {
@@ -257,12 +252,6 @@ public class HeroScript : MonoBehaviour
                 Footstepsound();
                 time = 0;
             }
-        }
-
-        if (dmgTimeCounter >= heroDmgDelay)
-        {
-            heroDmgOn = true;
-            dmgTimeCounter = 0;
         }
         
     }
@@ -310,10 +299,4 @@ public class HeroScript : MonoBehaviour
     {
         return score;
     }
-
-    public bool getHeroDmgOn()
-    {
-        return heroDmgOn;
-    }
-
 }
