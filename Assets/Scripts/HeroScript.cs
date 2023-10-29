@@ -28,6 +28,7 @@ public class HeroScript : MonoBehaviour
         oldHeroPosition = 0;
         maxScore = 0;
         score = -5;
+
         health = 100;
         speed = 10.0f;
         lives = 3;
@@ -36,6 +37,7 @@ public class HeroScript : MonoBehaviour
         rb.freezeRotation = true;
         anim = GetComponent<Animator>();
         onGround = true;
+        respawn();
     }
 
     public int getHealth()
@@ -158,7 +160,7 @@ public class HeroScript : MonoBehaviour
     {
         Debug.Log("RESPAWN");
         anim.SetTrigger("Respawn");
-        transform.position = transform.position = new Vector3(respawnPoint.transform.position.x , respawnPoint.transform.position.y, respawnPoint.transform.position.z);
+        transform.position = new Vector3(respawnPoint.transform.position.x , respawnPoint.transform.position.y, respawnPoint.transform.position.z);
         transform.localScale = new Vector3(1f, 1f, 1f);
         blockControls = false;
     }
