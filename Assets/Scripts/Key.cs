@@ -6,6 +6,7 @@ public class Key : MonoBehaviour
 {
 
     public HeroScript hs;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,18 +16,15 @@ public class Key : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (hs.getScore() >= 10)
-        {
-            gameObject.SetActive(true);
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
+        //toDo logik für laserwand freischalten für prefab
+
+        hs.playKeyCollectSound();
+        gameObject.SetActive(false);
     }
+
 }

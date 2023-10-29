@@ -21,6 +21,7 @@ public class HeroScript : MonoBehaviour
     private int transitionState;
     private Rigidbody2D rb;
     public GameObject respawnPoint;
+    public GameObject key;
     public Text healthText, scoreText;
     private bool blockControls;
     public AudioSource heroAudio;
@@ -156,17 +157,30 @@ public class HeroScript : MonoBehaviour
                 }
             }
         }
+
+        activateKey();
+
+    }
+
+    private void activateKey()
+    {
+        if(score == 100)
+        {
+            int randomValue = (int) Random.Range(currentHeroPosition, currentHeroPosition *2);
+            key.transform.position = new Vector3(currentHeroPosition + randomValue, key.transform.position.y, key.transform.position.z);
+            key.SetActive(true);
+        }
     }
 
     public void respawn()
     {
-        Debug.Log("RESPAWN");
-        anim.SetTrigger("Respawn");
-        transform.position = new Vector3(respawnPoint.transform.position.x , respawnPoint.transform.position.y, respawnPoint.transform.position.z);
-        transform.localScale = new Vector3(1f, 1f, 1f);
-        blockControls = false;
-        heroAudio.PlayOneShot(heroAudioClip[5]);
-        heroDmgOn = true;
+       // Debug.Log("RESPAWN");
+       // anim.SetTrigger("Respawn");
+       // transform.position = new Vector3(respawnPoint.transform.position.x , respawnPoint.transform.position.y, respawnPoint.transform.position.z);
+        //transform.localScale = new Vector3(1f, 1f, 1f);
+        //blockControls = false;
+        //heroAudio.PlayOneShot(heroAudioClip[5]);
+        //heroDmgOn = true;
     }
     public void gameOver()
     {
@@ -280,6 +294,11 @@ public class HeroScript : MonoBehaviour
        anim.SetInteger("Trans", transitionState); // stand animation
        //heroAudio.PlayOneShot(heroAudioClip[2]);
 
+    }
+
+    public void playKeyCollectSound()
+    {
+        heroAudio.PlayOneShot(heroAudioClip[6]);
     }
 
     public int getHealth()
