@@ -176,7 +176,9 @@ public class HeroScript : MonoBehaviour
         transform.localScale = new Vector3(1f, 1f, 1f);
         blockControls = false;
         heroAudio.PlayOneShot(heroAudioClip[5]);
-       
+        health = 100;
+        healthText.text = health + "";
+
     }
     public void gameOver()
     {
@@ -208,7 +210,7 @@ public class HeroScript : MonoBehaviour
         if (Input.GetKeyDown("down") && onGround == true)
         {
             heroAudio.PlayOneShot(heroAudioClip[4]);
-            decreaseHealth();
+            
             onGround = true;
 
         }
