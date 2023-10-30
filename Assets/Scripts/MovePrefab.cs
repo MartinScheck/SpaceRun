@@ -11,8 +11,7 @@ public class MovePrefab : MonoBehaviour
     public GameObject gunPiece;
 
     public GameObject key;
-    public GameObject gate01;
-    public GameObject gate02;
+    public GameObject gate;
 
     public GameObject light_L01;
     public GameObject light_L02;
@@ -49,6 +48,7 @@ public class MovePrefab : MonoBehaviour
     private bool secretUnlocked, keyCollected, prefabIsMoved;
 
     private float updateInterval = 0.5f;
+    private float minDistance = 5.0f;
     private float lastUpdateTime;
 
 
@@ -124,6 +124,21 @@ public class MovePrefab : MonoBehaviour
             gun.transform.position = new Vector3(gunRange, gun.transform.position.y, gun.transform.position.z);
             gunPiece.transform.position = new Vector3(gunRange + 1.245683f, gunPiece.transform.position.y, gunPiece.transform.position.z);
 
+            float distanceCrate = Mathf.Abs(gate.transform.position.x - crate.transform.position.x);
+
+            if (distanceCrate < minDistance)
+            {
+                float distanceLazer = Mathf.Abs(gate.transform.position.x - lazer.transform.position.x);
+                if (distanceLazer < minDistance)
+                {
+                    gate.transform.position += new Vector3(6.0f, 0.0f, 0.0f);
+                }
+                else
+                {
+                    gate.transform.position += new Vector3(6.0f, 0.0f, 0.0f);
+                }
+            }
+
             if (!keyCollected) //keyColleced
             {
                 sensorToActivate.SetActive(true);
@@ -143,7 +158,7 @@ public class MovePrefab : MonoBehaviour
         {
             keyCollected = true;
 
-            if (!gate01.activeSelf && !gate02.activeSelf)
+            if (!gate.activeSelf)
             {
                 secretUnlocked = true;
                 prefabIsMoved = true;

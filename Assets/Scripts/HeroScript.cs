@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HeroScript : MonoBehaviour
 {
@@ -22,10 +23,7 @@ public class HeroScript : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject respawnPoint;
     public GameObject key;
-    public GameObject gate01;
-    public GameObject gate02;
-
-    public GameObject secretPrefab;
+    public GameObject gate;
 
     public Text healthText, scoreText;
     private bool blockControls;
@@ -171,17 +169,15 @@ public class HeroScript : MonoBehaviour
             int randomValue = (int) Random.Range(currentHeroPosition, currentHeroPosition *2);
             activateGate(randomValue);
             key.transform.position = new Vector3(currentHeroPosition + randomValue, key.transform.position.y, key.transform.position.z);
+
             key.SetActive(true);
         }
     }
 
     private void activateGate(int value)
     {
-        gate01.transform.position = new Vector3((currentHeroPosition + value * 2), gate01.transform.position.y, gate01.transform.position.z);
-        gate02.transform.position = new Vector3((currentHeroPosition + value * 2), gate02.transform.position.y, gate02.transform.position.z);
-        gate01.SetActive(true);
-        gate02.SetActive(true);
-
+        gate.transform.position = new Vector3((currentHeroPosition + value * 2), gate.transform.position.y, gate.transform.position.z);
+        gate.SetActive(true);
     }
 
     public void respawn()
@@ -199,6 +195,9 @@ public class HeroScript : MonoBehaviour
     public void gameOver()
     {
         heroAudio.PlayOneShot(heroAudioClip[8]);
+        health = 0;
+        lives = 0;
+        SceneManager.LoadScene("GameOverScene");
         Debug.Log("GAME OVER");
     }
     // Update is called once per frame
