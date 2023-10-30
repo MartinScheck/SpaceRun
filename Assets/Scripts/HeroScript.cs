@@ -23,10 +23,7 @@ public class HeroScript : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject respawnPoint;
     public GameObject key;
-    public GameObject gate01;
-    public GameObject gate02;
-
-    public GameObject secretPrefab;
+    public GameObject gate;
 
     public Text healthText, scoreText;
     private bool blockControls;
@@ -179,11 +176,8 @@ public class HeroScript : MonoBehaviour
 
     private void activateGate(int value)
     {
-        gate01.transform.position = new Vector3((currentHeroPosition + value * 2), gate01.transform.position.y, gate01.transform.position.z);
-        gate02.transform.position = new Vector3((currentHeroPosition + value * 2), gate02.transform.position.y, gate02.transform.position.z);
-        gate01.SetActive(true);
-        gate02.SetActive(true);
-
+        gate.transform.position = new Vector3((currentHeroPosition + value * 2), gate.transform.position.y, gate.transform.position.z);
+        gate.SetActive(true);
     }
 
     public void respawn()
