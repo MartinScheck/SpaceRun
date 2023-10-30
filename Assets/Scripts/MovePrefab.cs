@@ -48,7 +48,6 @@ public class MovePrefab : MonoBehaviour
     private bool secretUnlocked, keyCollected, prefabIsMoved;
 
     private float updateInterval = 0.5f;
-    private float minDistance = 5.0f;
     private float lastUpdateTime;
 
 
@@ -98,46 +97,31 @@ public class MovePrefab : MonoBehaviour
             prefabToMove.transform.position.y,
             prefabToMove.transform.position.z);
 
+                float minRange = prefabToMove.transform.position.x;
+                float maxRange = prefabToMove.transform.position.x + 6f;
 
-            float minRange = prefabToMove.transform.position.x;
-            float maxRange = prefabToMove.transform.position.x + 6f;
+                float gunRange = Random.Range(minRange, maxRange);
 
-            float gunRange = Random.Range(minRange, maxRange);
+                float lazerRange = Random.Range(minRange, maxRange);
 
-            float lazerRange = Random.Range(minRange, maxRange);
+                Vector3 fuelCanPosition = new Vector3(Random.Range(minRange, maxRange), fuelCan.transform.position.y, fuelCan.transform.position.z);
+                fuelCan.transform.position = fuelCanPosition;
 
-            Vector3 fuelCanPosition = new Vector3(Random.Range(minRange, maxRange), fuelCan.transform.position.y, fuelCan.transform.position.z);
-            fuelCan.transform.position = fuelCanPosition;
+                Vector3 lazerPosition = new Vector3(lazerRange, lazer.transform.position.y, lazer.transform.position.z);
+                lazer.transform.position = lazerPosition;
 
-            Vector3 lazerPosition = new Vector3(lazerRange, lazer.transform.position.y, lazer.transform.position.z);
-            lazer.transform.position = lazerPosition;
-
-            float crateRange = Random.Range(-6f, -7f);
-            if (Random.Range(0, 2) == 0)
-            {
-                crateRange = Random.Range(6f, 7f);
-            }
-
-            Vector3 cratePosition = new Vector3(lazerRange + crateRange, crate.transform.position.y, crate.transform.position.z);
-            crate.transform.position = cratePosition;
-
-            gun.transform.position = new Vector3(gunRange, gun.transform.position.y, gun.transform.position.z);
-            gunPiece.transform.position = new Vector3(gunRange + 1.245683f, gunPiece.transform.position.y, gunPiece.transform.position.z);
-
-            float distanceCrate = Mathf.Abs(gate.transform.position.x - crate.transform.position.x);
-
-            if (distanceCrate < minDistance)
-            {
-                float distanceLazer = Mathf.Abs(gate.transform.position.x - lazer.transform.position.x);
-                if (distanceLazer < minDistance)
+                float crateRange = Random.Range(-6f, -7f);
+                if (Random.Range(0, 2) == 0)
                 {
-                    gate.transform.position += new Vector3(6.0f, 0.0f, 0.0f);
+                    crateRange = Random.Range(6f, 7f);
                 }
-                else
-                {
-                    gate.transform.position += new Vector3(6.0f, 0.0f, 0.0f);
-                }
-            }
+
+                Vector3 cratePosition = new Vector3(lazerRange + crateRange, crate.transform.position.y, crate.transform.position.z);
+                crate.transform.position = cratePosition;
+
+                gun.transform.position = new Vector3(gunRange, gun.transform.position.y, gun.transform.position.z);
+                gunPiece.transform.position = new Vector3(gunRange + 1.245683f, gunPiece.transform.position.y, gunPiece.transform.position.z);
+
 
             if (!keyCollected) //keyColleced
             {
@@ -145,10 +129,9 @@ public class MovePrefab : MonoBehaviour
                 sensorToActivate.transform.position = new Vector3(gameObject.transform.position.x + 20f, 
                     sensorToActivate.transform.position.y, 
                     sensorToActivate.transform.position.z);
-            }
 
+            }
         }
-        
     }
 
 
@@ -160,6 +143,7 @@ public class MovePrefab : MonoBehaviour
 
             if (!gate.activeSelf)
             {
+
                 secretUnlocked = true;
                 prefabIsMoved = true;
 

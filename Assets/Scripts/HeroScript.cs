@@ -169,14 +169,18 @@ public class HeroScript : MonoBehaviour
             int randomValue = (int) Random.Range(currentHeroPosition, currentHeroPosition *2);
             activateGate(randomValue);
             key.transform.position = new Vector3(currentHeroPosition + randomValue, key.transform.position.y, key.transform.position.z);
-
             key.SetActive(true);
         }
     }
 
     private void activateGate(int value)
     {
-        gate.transform.position = new Vector3((currentHeroPosition + value * 2), gate.transform.position.y, gate.transform.position.z);
+        float prefabDistance = 25.63582f;
+        float gateSpawn = currentHeroPosition + value * 2;
+        float traveldPrefabs = gateSpawn / prefabDistance;
+
+        gate.transform.position = new Vector3(Mathf.RoundToInt(traveldPrefabs) * prefabDistance, gate.transform.position.y, gate.transform.position.z);
+
         gate.SetActive(true);
     }
 
