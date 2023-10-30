@@ -127,10 +127,9 @@ public class MovePrefab : MonoBehaviour
             if (!keyCollected) //keyColleced
             {
                 sensorToActivate.SetActive(true);
-                sensorToActivate.transform.position = new Vector3(
-                sensorToActivate.transform.position.x - 20f,
-                sensorToActivate.transform.position.y,
-                sensorToActivate.transform.position.z);
+                sensorToActivate.transform.position = new Vector3(gameObject.transform.position.x + 20f, 
+                    sensorToActivate.transform.position.y, 
+                    sensorToActivate.transform.position.z);
             }
 
         }
