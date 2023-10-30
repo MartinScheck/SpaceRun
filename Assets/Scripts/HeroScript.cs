@@ -22,6 +22,11 @@ public class HeroScript : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject respawnPoint;
     public GameObject key;
+    public GameObject gate01;
+    public GameObject gate02;
+
+    public GameObject secretPrefab;
+
     public Text healthText, scoreText;
     private bool blockControls;
     public AudioSource heroAudio;
@@ -160,12 +165,23 @@ public class HeroScript : MonoBehaviour
 
     private void activateKey()
     {
-        if(score == 150)
+
+        if(score == 30)
         {
             int randomValue = (int) Random.Range(currentHeroPosition, currentHeroPosition *2);
+            activateGate(randomValue);
             key.transform.position = new Vector3(currentHeroPosition + randomValue, key.transform.position.y, key.transform.position.z);
             key.SetActive(true);
         }
+    }
+
+    private void activateGate(int value)
+    {
+        gate01.transform.position = new Vector3((currentHeroPosition + value * 2), gate01.transform.position.y, gate01.transform.position.z);
+        gate02.transform.position = new Vector3((currentHeroPosition + value * 2), gate02.transform.position.y, gate02.transform.position.z);
+        gate01.SetActive(true);
+        gate02.SetActive(true);
+
     }
 
     public void respawn()

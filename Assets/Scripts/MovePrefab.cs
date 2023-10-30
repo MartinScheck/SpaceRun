@@ -10,6 +10,10 @@ public class MovePrefab : MonoBehaviour
     public GameObject crate;
     public GameObject gunPiece;
 
+    public GameObject key;
+    public GameObject gate01;
+    public GameObject gate02;
+
     public GameObject light_L01;
     public GameObject light_L02;
     public GameObject light_L03;
@@ -39,8 +43,10 @@ public class MovePrefab : MonoBehaviour
     public GameObject windowBottomOff;
     public GameObject windowBottomBubble;
 
-    public GameObject prefabToMove, sensorToActivate;
-    private float deltaX;
+    public GameObject prefabToMove, sensorToActivate, secretPrefab;
+    private float deltaX, offsetX;
+
+    private bool secretUnlocked, keyCollected, prefabIsMoved;
 
     private float updateInterval = 0.5f;
     private float lastUpdateTime;
@@ -49,7 +55,11 @@ public class MovePrefab : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        keyCollected = false;
+        prefabIsMoved = false;
+        secretUnlocked = false;
         deltaX = 102.535682f;
+        offsetX = 51.2657f + 1.7757f;
     }
 
     // Update is called once per frame
@@ -73,38 +83,82 @@ public class MovePrefab : MonoBehaviour
         setLevelObjects();
         setBackGround();
 
-        gameObject.SetActive(false);
-        prefabToMove.transform.position = new Vector3(
+
+
+        if (!prefabIsMoved)
+        {
+            setSecretPrefabIfGateIsNotActive();
+        }
+
+        if (!secretUnlocked)
+        {
+            gameObject.SetActive(false);
+            prefabToMove.transform.position = new Vector3(
             prefabToMove.transform.position.x + deltaX,
             prefabToMove.transform.position.y,
             prefabToMove.transform.position.z);
 
-        float minRange = prefabToMove.transform.position.x;
-        float maxRange = prefabToMove.transform.position.x + 6f;
 
-        float gunRange = Random.Range(minRange, maxRange);
+            float minRange = prefabToMove.transform.position.x;
+            float maxRange = prefabToMove.transform.position.x + 6f;
 
-        float lazerRange = Random.Range(minRange, maxRange);
+            float gunRange = Random.Range(minRange, maxRange);
 
-        Vector3 fuelCanPosition = new Vector3(Random.Range(minRange, maxRange), fuelCan.transform.position.y, fuelCan.transform.position.z);
-        fuelCan.transform.position = fuelCanPosition;
+            float lazerRange = Random.Range(minRange, maxRange);
 
-        Vector3 lazerPosition = new Vector3(lazerRange, lazer.transform.position.y, lazer.transform.position.z);
-        lazer.transform.position = lazerPosition;
+            Vector3 fuelCanPosition = new Vector3(Random.Range(minRange, maxRange), fuelCan.transform.position.y, fuelCan.transform.position.z);
+            fuelCan.transform.position = fuelCanPosition;
 
-        float crateRange = Random.Range(-6f, -7f);
-        if (Random.Range(0, 2) == 0)
-        {
-            crateRange = Random.Range(6f, 7f);
+            Vector3 lazerPosition = new Vector3(lazerRange, lazer.transform.position.y, lazer.transform.position.z);
+            lazer.transform.position = lazerPosition;
+
+            float crateRange = Random.Range(-6f, -7f);
+            if (Random.Range(0, 2) == 0)
+            {
+                crateRange = Random.Range(6f, 7f);
+            }
+
+            Vector3 cratePosition = new Vector3(lazerRange + crateRange, crate.transform.position.y, crate.transform.position.z);
+            crate.transform.position = cratePosition;
+
+            gun.transform.position = new Vector3(gunRange, gun.transform.position.y, gun.transform.position.z);
+            gunPiece.transform.position = new Vector3(gunRange + 1.245683f, gunPiece.transform.position.y, gunPiece.transform.position.z);
+
+            if (!keyCollected) //keyColleced
+            {
+                sensorToActivate.SetActive(true);
+                sensorToActivate.transform.position = new Vector3(
+                sensorToActivate.transform.position.x - 20f,
+                sensorToActivate.transform.position.y,
+                sensorToActivate.transform.position.z);
+            }
+
         }
+        
+    }
 
-        Vector3 cratePosition = new Vector3(lazerRange + crateRange, crate.transform.position.y, crate.transform.position.z);
-        crate.transform.position = cratePosition;
 
-        gun.transform.position = new Vector3(gunRange, gun.transform.position.y, gun.transform.position.z);
-        gunPiece.transform.position = new Vector3(gunRange + 1.245683f, gunPiece.transform.position.y, gunPiece.transform.position.z);
+    private void setSecretPrefabIfGateIsNotActive()
+    {
+        if (key.activeSelf || keyCollected)
+        {
+            keyCollected = true;
 
-        sensorToActivate.SetActive(true);
+            if (!gate01.activeSelf && !gate02.activeSelf)
+            {
+                secretUnlocked = true;
+                prefabIsMoved = true;
+
+                gameObject.SetActive(true);
+
+                secretPrefab.SetActive(true);
+                secretPrefab.transform.position = new Vector3(
+                prefabToMove.transform.position.x + deltaX - offsetX,
+                prefabToMove.transform.position.y,
+                prefabToMove.transform.position.z);
+            }
+
+        }
     }
 
     private void setLevelObjects()
