@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HeroScript : MonoBehaviour
 {
@@ -171,6 +172,7 @@ public class HeroScript : MonoBehaviour
             int randomValue = (int) Random.Range(currentHeroPosition, currentHeroPosition *2);
             activateGate(randomValue);
             key.transform.position = new Vector3(currentHeroPosition + randomValue, key.transform.position.y, key.transform.position.z);
+
             key.SetActive(true);
         }
     }
@@ -199,6 +201,9 @@ public class HeroScript : MonoBehaviour
     public void gameOver()
     {
         heroAudio.PlayOneShot(heroAudioClip[8]);
+        health = 0;
+        lives = 0;
+        SceneManager.LoadScene("GameOverScene");
         Debug.Log("GAME OVER");
     }
     // Update is called once per frame
