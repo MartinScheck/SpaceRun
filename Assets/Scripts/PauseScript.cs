@@ -55,11 +55,6 @@ public class PauseScript : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
-    public void HelpMenu()
-    {
-
-    }
-
     public void BacktoMenu()
     {
         Time.timeScale = 1.0f;
