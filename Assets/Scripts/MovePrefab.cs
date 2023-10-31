@@ -51,8 +51,6 @@ public class MovePrefab : MonoBehaviour
 
     private bool prefabIsMoved;
 
-    private List<GameObject> sensorList = new List<GameObject>();
-
     private float updateInterval = 0.5f;
     private float lastUpdateTime;
 
@@ -157,7 +155,7 @@ public class MovePrefab : MonoBehaviour
                 Debug.Log("secretPrefabMoved");
                 secretPrefab.SetActive(true);
                 secretPrefab.transform.position = new Vector3(
-                gate.transform.position.x,
+                gate.transform.position.x + 4.4025f,
                 prefabToMove.transform.position.y,
                 prefabToMove.transform.position.z);
             }
