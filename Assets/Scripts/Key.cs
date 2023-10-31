@@ -7,10 +7,12 @@ public class Key : MonoBehaviour
     public GameObject gate;
     public HeroScript hs;
 
+    public bool keyCollected;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        keyCollected = false;
     }
 
     // Update is called once per frame
@@ -25,7 +27,12 @@ public class Key : MonoBehaviour
         //toDo logik für laserwand freischalten für prefab
 
         hs.playKeyCollectSound();
+        keyCollected = true;
         gameObject.SetActive(false);
     }
 
+    public bool getKeyCollected()
+    {
+        return keyCollected;
+    }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MovePrefab : MonoBehaviour
 {
+    public Key keyCS;
+
     public GameObject fuelCan;
     public GameObject lazer;
     public GameObject gun;
@@ -42,10 +44,14 @@ public class MovePrefab : MonoBehaviour
     public GameObject windowBottomOff;
     public GameObject windowBottomBubble;
 
+    public GameObject deactivator;
+
     public GameObject prefabToMove, sensorToActivate, secretPrefab;
     private float deltaX, offsetX;
 
-    private bool secretUnlocked, keyCollected, prefabIsMoved;
+    private bool prefabIsMoved;
+
+    private List<GameObject> sensorList = new List<GameObject>();
 
     private float updateInterval = 0.5f;
     private float lastUpdateTime;
@@ -54,11 +60,8 @@ public class MovePrefab : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        keyCollected = false;
         prefabIsMoved = false;
-        secretUnlocked = false;
         deltaX = 102.535682f;
-        offsetX = 51.2657f + 1.7757f;
     }
 
     // Update is called once per frame
@@ -89,13 +92,17 @@ public class MovePrefab : MonoBehaviour
             setSecretPrefabIfGateIsNotActive();
         }
 
-        if (!secretUnlocked)
-        {
+
+            Debug.Log("movePrefab");
+
             gameObject.SetActive(false);
             prefabToMove.transform.position = new Vector3(
             prefabToMove.transform.position.x + deltaX,
             prefabToMove.transform.position.y,
             prefabToMove.transform.position.z);
+
+
+
 
                 float minRange = prefabToMove.transform.position.x;
                 float maxRange = prefabToMove.transform.position.x + 6f;
@@ -123,39 +130,37 @@ public class MovePrefab : MonoBehaviour
                 gunPiece.transform.position = new Vector3(gunRange + 1.245683f, gunPiece.transform.position.y, gunPiece.transform.position.z);
 
 
-            if (!keyCollected) //keyColleced
-            {
-                sensorToActivate.SetActive(true);
-                sensorToActivate.transform.position = new Vector3(gameObject.transform.position.x + 20f, 
-                    sensorToActivate.transform.position.y, 
-                    sensorToActivate.transform.position.z);
-
-            }
-        }
+            sensorToActivate.SetActive(true);
+        
     }
 
 
     private void setSecretPrefabIfGateIsNotActive()
     {
-        if (key.activeSelf || keyCollected)
+        if (key.activeSelf || keyCS.getKeyCollected())
         {
-            keyCollected = true;
 
-            if (!gate.activeSelf)
+            if (!gate.activeSelf && keyCS.getKeyCollected())
             {
 
-                secretUnlocked = true;
+                Debug.Log("secretUnlocked");
                 prefabIsMoved = true;
+                deactivator.SetActive(true);
 
-                gameObject.SetActive(true);
+                deactivator.transform.position = new Vector3(
+                gate.transform.position.x - deltaX + 20f,
+                gate.transform.position.y,
+                gate.transform.position.z);
 
+                gameObject.SetActive(false);
+
+                Debug.Log("secretPrefabMoved");
                 secretPrefab.SetActive(true);
                 secretPrefab.transform.position = new Vector3(
-                prefabToMove.transform.position.x + deltaX - offsetX,
+                gate.transform.position.x,
                 prefabToMove.transform.position.y,
                 prefabToMove.transform.position.z);
             }
-
         }
     }
 

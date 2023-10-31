@@ -3204,7 +3204,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &331605748
 GameObject:
@@ -6365,6 +6365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aebae1894ed97343ab5898221521404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyCS: {fileID: 1854536052}
   fuelCan: {fileID: 1885859244}
   lazer: {fileID: 607741872}
   gun: {fileID: 1548478318}
@@ -6396,6 +6397,7 @@ MonoBehaviour:
   windowTopBubble: {fileID: 1444035539}
   windowBottomOff: {fileID: 681093054}
   windowBottomBubble: {fileID: 577323014}
+  deactivator: {fileID: 1088462798}
   prefabToMove: {fileID: 1803096748}
   sensorToActivate: {fileID: 1867472518}
   secretPrefab: {fileID: 148022979}
@@ -9701,7 +9703,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &893587284
 CapsuleCollider2D:
@@ -10159,7 +10161,7 @@ Transform:
   m_GameObject: {fileID: 904245827}
   m_LocalRotation: {x: -0, y: -0, z: -0.5288615, w: 0.8487081}
   m_LocalPosition: {x: -0.41137573, y: 0.09720317, z: 0}
-  m_LocalScale: {x: 2.7933142, y: 2.8002288, z: 2.79677}
+  m_LocalScale: {x: 2.793314, y: 2.8002288, z: 2.79677}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1426274854}
@@ -12189,6 +12191,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1088462798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1088462799}
+  - component: {fileID: 1088462800}
+  - component: {fileID: 1088462801}
+  m_Layer: 0
+  m_Name: Gate_Move_Sensor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1088462799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088462798}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.47, y: -1.2378014, z: 0.8421031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1088462800
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088462798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.2}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 16}
+  m_EdgeRadius: 0
+--- !u!114 &1088462801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088462798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cdab8fc3936967459c657a24a3607f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensor1: {fileID: 1768199046}
+  sensor2: {fileID: 1598341969}
+  sensor3: {fileID: 1867472518}
+  sensor4: {fileID: 645096612}
 --- !u!1 &1095297000
 GameObject:
   m_ObjectHideFlags: 0
@@ -13809,7 +13886,7 @@ GameObject:
   - component: {fileID: 1210916700}
   - component: {fileID: 1210916701}
   m_Layer: 0
-  m_Name: Gunknob
+  m_Name: Gunknob_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18564,9 +18641,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aebae1894ed97343ab5898221521404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyCS: {fileID: 1854536052}
   fuelCan: {fileID: 1145494765}
   lazer: {fileID: 1596421497}
-  gun: {fileID: 965775523}
+  gun: {fileID: 1210916698}
   crate: {fileID: 1344381396}
   gunPiece: {fileID: 1269570178}
   key: {fileID: 1854536047}
@@ -18595,6 +18673,7 @@ MonoBehaviour:
   windowTopBubble: {fileID: 736659014}
   windowBottomOff: {fileID: 1800014962}
   windowBottomBubble: {fileID: 1308040743}
+  deactivator: {fileID: 1088462798}
   prefabToMove: {fileID: 1628080163}
   sensorToActivate: {fileID: 1768199046}
   secretPrefab: {fileID: 148022979}
@@ -19985,7 +20064,7 @@ Transform:
   - {fileID: 1561075307}
   - {fileID: 1663999914}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1708734729
 MonoBehaviour:
@@ -20265,7 +20344,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1763605389
 Transform:
   m_ObjectHideFlags: 0
@@ -20274,8 +20353,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763605388}
   m_LocalRotation: {x: -0, y: -0, z: -0.2261657, w: 0.97408885}
-  m_LocalPosition: {x: 21.43, y: -0.54, z: 0}
-  m_LocalScale: {x: 3.982881, y: 3.9889953, z: 0.3575553}
+  m_LocalPosition: {x: 96.97, y: -45.79, z: 0}
+  m_LocalScale: {x: 3.982881, y: 3.9889958, z: 0.3575553}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 904245830}
@@ -20448,6 +20527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aebae1894ed97343ab5898221521404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyCS: {fileID: 1854536052}
   fuelCan: {fileID: 28746164}
   lazer: {fileID: 1136687605}
   gun: {fileID: 2036537841}
@@ -20479,6 +20559,7 @@ MonoBehaviour:
   windowTopBubble: {fileID: 1120394924}
   windowBottomOff: {fileID: 1948978019}
   windowBottomBubble: {fileID: 430670917}
+  deactivator: {fileID: 1088462798}
   prefabToMove: {fileID: 1657655658}
   sensorToActivate: {fileID: 645096612}
   secretPrefab: {fileID: 148022979}
@@ -21423,11 +21504,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1063089775
+  m_SortingLayer: -3
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 9c649377fb11f78429f4c15afd9a1bab, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.21176471}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21445,12 +21526,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854536047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.13, y: 0.09, z: 0}
+  m_LocalPosition: {x: -6.78, y: 0, z: 0}
   m_LocalScale: {x: 0.16009033, y: 0.16009033, z: 0.16009033}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1854536052
 MonoBehaviour:
@@ -21466,6 +21547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gate: {fileID: 1763605388}
   hs: {fileID: 893587285}
+  keyCollected: 0
 --- !u!1 &1858724079
 GameObject:
   m_ObjectHideFlags: 0
@@ -21679,6 +21761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aebae1894ed97343ab5898221521404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyCS: {fileID: 1854536052}
   fuelCan: {fileID: 1131789037}
   lazer: {fileID: 164581257}
   gun: {fileID: 792320058}
@@ -21710,6 +21793,7 @@ MonoBehaviour:
   windowTopBubble: {fileID: 853346269}
   windowBottomOff: {fileID: 177054736}
   windowBottomBubble: {fileID: 1861279696}
+  deactivator: {fileID: 1088462798}
   prefabToMove: {fileID: 854953361}
   sensorToActivate: {fileID: 1598341969}
   secretPrefab: {fileID: 148022979}
@@ -24465,7 +24549,7 @@ RectTransform:
   - {fileID: 743956991}
   - {fileID: 1683516449}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

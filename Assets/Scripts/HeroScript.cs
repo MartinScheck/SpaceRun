@@ -164,11 +164,12 @@ public class HeroScript : MonoBehaviour
     private void activateKey()
     {
 
-        if(score == 30)
+        if(score == 200)
         {
-            int randomValue = (int) Random.Range(currentHeroPosition, currentHeroPosition *2);
-            activateGate(randomValue);
-            key.transform.position = new Vector3(currentHeroPosition + randomValue, key.transform.position.y, key.transform.position.z);
+            int randomValuex = (int) Random.Range(currentHeroPosition, currentHeroPosition *2);
+            float randomValuey = Random.Range(0f, 0.8f);
+            activateGate(randomValuex);
+            key.transform.position = new Vector3(currentHeroPosition + randomValuex, key.transform.position.y + randomValuey, key.transform.position.z);
             key.SetActive(true);
         }
     }
