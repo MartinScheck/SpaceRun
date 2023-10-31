@@ -10,6 +10,11 @@ public class DeactivatorPrefabMoving : MonoBehaviour
     public GameObject sensor3;
     public GameObject sensor4;
 
+    public GameObject sensorCloned1;
+    public GameObject sensorCloned2;
+    public GameObject sensorCloned3;
+    public GameObject sensorCloned4;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +34,13 @@ public class DeactivatorPrefabMoving : MonoBehaviour
         sensor2.SetActive(false);
         sensor3.SetActive(false);
         sensor4.SetActive(false);
+
+        sensorCloned1.SetActive(true);
+        sensorCloned2.SetActive(true);
+        sensorCloned3.SetActive(true);
+        sensorCloned4.SetActive(true);
+
     }
+
 
 }
