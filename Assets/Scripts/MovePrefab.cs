@@ -8,9 +8,8 @@ public class MovePrefab : MonoBehaviour
 
     public GameObject fuelCan;
     public GameObject lazer;
-    public GameObject gun;
-    public GameObject crate;
     public GameObject gunPiece;
+    public GameObject crate;
 
     public GameObject key;
     public GameObject gate;
@@ -48,6 +47,7 @@ public class MovePrefab : MonoBehaviour
 
     public GameObject prefabToMove, sensorToActivate, secretPrefab;
     private float deltaX, offsetX;
+
 
     private bool prefabIsMoved;
 
@@ -124,9 +124,8 @@ public class MovePrefab : MonoBehaviour
                 Vector3 cratePosition = new Vector3(lazerRange + crateRange, crate.transform.position.y, crate.transform.position.z);
                 crate.transform.position = cratePosition;
 
-                gun.transform.position = new Vector3(gunRange, gun.transform.position.y, gun.transform.position.z);
-                gunPiece.transform.position = new Vector3(gunRange + 1.245683f, gunPiece.transform.position.y, gunPiece.transform.position.z);
-
+                gunPiece.transform.position = new Vector3(gunRange, gunPiece.transform.position.y, gunPiece.transform.position.z);
+                
 
             sensorToActivate.SetActive(true);
         
@@ -172,7 +171,6 @@ public class MovePrefab : MonoBehaviour
         crate.SetActive(random() && random());
 
         bool laserGunBool = random();
-        gun.SetActive(laserGunBool);
         gunPiece.SetActive(laserGunBool);
     }
 
