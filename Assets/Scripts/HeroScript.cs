@@ -24,6 +24,7 @@ public class HeroScript : MonoBehaviour
     public GameObject respawnPoint;
     public GameObject key;
     public GameObject gate;
+    public GameObject gateBlocker;
 
     public Text healthText, scoreText;
     private bool blockControls;
@@ -164,7 +165,7 @@ public class HeroScript : MonoBehaviour
     private void activateKey()
     {
 
-        if(score == 200)
+        if(score == 150)
         {
             int randomValuex = (int) Random.Range(currentHeroPosition, currentHeroPosition *2);
             float randomValuey = Random.Range(0f, 0.8f);
@@ -180,8 +181,11 @@ public class HeroScript : MonoBehaviour
         float gateSpawn = currentHeroPosition + value * 2;
         float traveldPrefabs = gateSpawn / prefabDistance;
 
-        gate.transform.position = new Vector3(Mathf.RoundToInt(traveldPrefabs) * prefabDistance, gate.transform.position.y, gate.transform.position.z);
+        float gatePosition = Mathf.RoundToInt(traveldPrefabs) * prefabDistance;
 
+        gate.transform.position = new Vector3(gatePosition, -1f, gate.transform.position.z);
+        gateBlocker.transform.position = new Vector3(gatePosition + 1.6437f, -1f, gateBlocker.transform.position.z);
+        gateBlocker.SetActive(true);
         gate.SetActive(true);
     }
 
