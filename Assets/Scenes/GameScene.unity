@@ -17312,7 +17312,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1708734731}
         m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
-        m_MethodName: HelpMenu
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
