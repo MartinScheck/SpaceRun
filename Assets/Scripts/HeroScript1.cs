@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class HeroScript : MonoBehaviour
+public class HeroScriptMobile : MonoBehaviour
 {
     private bool onGround;
     public float speed;
@@ -216,74 +216,12 @@ public class HeroScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("up") && onGround == true && blockControls == false)
-        {
-            // Add a vertical force to the player.
-            rb.AddForce(new Vector2(0f, 9.0f), ForceMode2D.Impulse);
-            onGround = false;
-            anim.SetTrigger("Jump"); // jump animation
-            
-            heroAudio.PlayOneShot(heroAudioClip[3]);
-
-        }
-        if (Input.GetKeyUp("right") || Input.GetKeyUp("left"))
-        {
-            //heroAudio.PlayOneShot(heroAudioClip[2]);
-            transitionState = 1;
-            anim.SetInteger("Trans", transitionState); // stand animation
-
-        }
-        if (Input.GetKeyDown("down") && onGround == true)
-        {
-            heroAudio.PlayOneShot(heroAudioClip[4]);
-            
-            onGround = true;
-
-        }
 
     }
 
     void FixedUpdate()
     {
         time = time + Time.deltaTime;
-
-        if (Input.GetKey("right") && blockControls == false)
-        {
-
-
-            currentHeroPosition = gameObject.transform.position.x;
-            increaseScore();
-            float distanceToMove = speed * Time.deltaTime;
-            transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
-            transform.localScale = new Vector3(1f, 1f, 1f);
-            transitionState = 2;
-            anim.SetInteger("Trans", transitionState); // run animation right
-            
-            if (time >= 0.5f && onGround == true)
-            {
-                Footstepsound();
-                time = 0;
-            }
-        }
-        if (Input.GetKey("left") && blockControls == false)
-        {
-
-            currentHeroPosition = gameObject.transform.position.x;
-
-            float distanceToMove = speed * Time.deltaTime;
-            transform.position = new Vector3(transform.position.x - distanceToMove, transform.position.y, transform.position.z);
-            
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-            transitionState = 2;
-            anim.SetInteger("Trans", transitionState); // run animation left
-
-            if (time >= 0.5f && onGround == true)
-            {
-                Footstepsound();
-                time = 0;
-            }
-        }
-
 
         if (!blockControls)
         {
@@ -324,6 +262,7 @@ public class HeroScript : MonoBehaviour
 
                 heroAudio.PlayOneShot(heroAudioClip[3]);
             }
+
 
         }
     }
