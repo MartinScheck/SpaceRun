@@ -6293,7 +6293,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612379527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.060464114}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6302,8 +6302,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1847.6124, y: 1006.7292}
-  m_SizeDelta: {x: 115.8107, y: 110.0841}
+  m_AnchoredPosition: {x: 1700.1, y: 983.8}
+  m_SizeDelta: {x: 184.1888, y: 175.0811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &612379529
 MonoBehaviour:
@@ -7362,7 +7362,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1708734731}
-        m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseScript_MobileApp, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -7512,7 +7512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &743956991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7539,7 +7539,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 2280, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &743956992
 MonoBehaviour:
@@ -8634,7 +8634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832358770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -949.8496, y: -533.8143, z: -0.060464114}
+  m_LocalPosition: {x: -615.8, y: -533.8143, z: -0.060464114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8759,7 +8759,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1708734731}
-        m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseScript_MobileApp, Assembly-CSharp
         m_MethodName: BacktoMenu
         m_Mode: 1
         m_Arguments:
@@ -9802,6 +9802,7 @@ MonoBehaviour:
   key: {fileID: 1854536047}
   gate: {fileID: 1763605388}
   gateBlocker: {fileID: 1223142934}
+  appHandler: {fileID: 0}
   healthText: {fileID: 612673147}
   scoreText: {fileID: 498200888}
   heroAudio: {fileID: 893587287}
@@ -15431,8 +15432,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -73.2, y: 458.2}
-  m_SizeDelta: {x: 34.7083, y: 39.8524}
+  m_AnchoredPosition: {x: -73.7, y: 431.5}
+  m_SizeDelta: {x: 53.6024, y: 61.5467}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332159045
 MonoBehaviour:
@@ -15479,7 +15480,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1708734731}
-        m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseScript_MobileApp, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -17437,7 +17438,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1708734731}
-        m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseScript_MobileApp, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -17979,7 +17980,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1708734731}
-        m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseScript_MobileApp, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -20434,7 +20435,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1708734731}
-        m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: PauseScript_MobileApp, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1
         m_Arguments:
@@ -20654,7 +20655,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1708734727}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7d43cc4712f554d9413d9b78bc7d8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ba4898fb9b8e20647b673fd9ef7577f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 743956990}

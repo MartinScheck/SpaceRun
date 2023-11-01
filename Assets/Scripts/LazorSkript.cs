@@ -11,6 +11,7 @@ public class LazorSkript : MonoBehaviour
     public AudioSource lazerAudioSource;
     public AudioClip lazerclip;
 
+
     // Start is called before the first frame update
     void Start()
     { 
@@ -28,8 +29,15 @@ public class LazorSkript : MonoBehaviour
             if (timeSinceLastDamage >= dmgdelaytime)
             {
                 lazerAudioSource.PlayOneShot(lazerclip);
-                hero.decreaseHealth();
-                timeSinceLastDamage = 0.0f;
+                if (!hero.getRespawned())
+                {
+                    hero.decreaseHealth();
+                    timeSinceLastDamage = 0.0f;
+                }
+                else
+                {
+                    hero.setRespawned();
+                }
             }
         }
     }
@@ -48,9 +56,11 @@ public class LazorSkript : MonoBehaviour
         if (collision.CompareTag("Hero"))
         {
             dmgOn = false;
-            timeSinceLastDamage = 0.0f;
-            hero.decreaseHealth();
-            
+            if (!hero.getRespawned())
+            {
+                hero.decreaseHealth();
+                timeSinceLastDamage = 0.0f;
+            }
 
         }
     }
