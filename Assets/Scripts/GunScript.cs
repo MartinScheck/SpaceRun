@@ -13,7 +13,9 @@ public class GunScript : MonoBehaviour
 
     public GameObject gun;
     private Animator anim;
+    private Animator animState;
     public GameObject gunBullet;
+    public GameObject gunBulletPosition;
 
     public float firetimedelay;
 
@@ -22,6 +24,7 @@ public class GunScript : MonoBehaviour
     {
         anim = gun.GetComponent<Animator>();
         firetimedelay = 4;
+        //animState = Animator.StringToHash("GunFireAnimation");
     }
 
     // Update is called once per frame
@@ -33,7 +36,6 @@ public class GunScript : MonoBehaviour
         {
             GunAiming();
             anim.SetBool("Scope", true);
-            GunFire();
         }   
         else 
         {
@@ -47,18 +49,18 @@ public class GunScript : MonoBehaviour
         anim.SetFloat("Firetime",firetimedelay -= Time.deltaTime);
         if(firetimedelay < 1)
         {
-            GunFire();
+            if(distanztoHero <= 20.0f)
+            {
+                GunFireBullet();
+            }
+                
             firetimedelay = 4;
         }
     }
-    void GunFire()
+    void GunFireBullet()
     {
 
-
-        Rigidbody2D rb = gunBullet.GetComponent<Rigidbody2D>();
-        // Add a vertical force to the player.
-        rb.AddForce(new Vector2(-0.003f, -0.003f).normalized, ForceMode2D.Impulse);
-
+        ShootNormalBullet();
 
     }
 
@@ -85,5 +87,9 @@ public class GunScript : MonoBehaviour
         // Wende die Rotation auf dein GameObject an.
         transform.rotation = Quaternion.Euler(0, 0, currentRotation);
 
+    }
+    public void ShootNormalBullet()
+    {
+        Instantiate(gunBullet, gunBulletPosition.transform.position, Quaternion.identity);
     }
 }
