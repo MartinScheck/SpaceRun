@@ -5472,7 +5472,7 @@ GameObject:
   - component: {fileID: 542673466}
   m_Layer: 0
   m_Name: HeroHitBox
-  m_TagString: Untagged
+  m_TagString: HeroHitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9802,7 +9802,6 @@ MonoBehaviour:
   key: {fileID: 1854536047}
   gate: {fileID: 1763605388}
   gateBlocker: {fileID: 1223142934}
-  appHandler: {fileID: 0}
   healthText: {fileID: 612673147}
   scoreText: {fileID: 498200888}
   heroAudio: {fileID: 893587287}
@@ -10423,7 +10422,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11894,7 +11893,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -20514,7 +20513,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

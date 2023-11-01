@@ -79,16 +79,17 @@ public class MovePrefab : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        setLevelObjects();
-        setBackGround();
-
-
-
-        if (!prefabIsMoved)
+        if (collision.gameObject.CompareTag("Hero"))
         {
-            setSecretPrefabIfGateIsNotActive();
-        }
+            setLevelObjects();
+            setBackGround();
+
+
+
+            if (!prefabIsMoved)
+            {
+                setSecretPrefabIfGateIsNotActive();
+            }
 
 
             Debug.Log("movePrefab");
@@ -102,33 +103,33 @@ public class MovePrefab : MonoBehaviour
 
 
 
-                float minRange = prefabToMove.transform.position.x;
-                float maxRange = prefabToMove.transform.position.x + 6f;
+            float minRange = prefabToMove.transform.position.x;
+            float maxRange = prefabToMove.transform.position.x + 6f;
 
-                float gunRange = Random.Range(minRange, maxRange);
+            float gunRange = Random.Range(minRange, maxRange);
 
-                float lazerRange = Random.Range(minRange, maxRange);
+            float lazerRange = Random.Range(minRange, maxRange);
 
-                Vector3 fuelCanPosition = new Vector3(Random.Range(minRange, maxRange), fuelCan.transform.position.y, fuelCan.transform.position.z);
-                fuelCan.transform.position = fuelCanPosition;
+            Vector3 fuelCanPosition = new Vector3(Random.Range(minRange, maxRange), fuelCan.transform.position.y, fuelCan.transform.position.z);
+            fuelCan.transform.position = fuelCanPosition;
 
-                Vector3 lazerPosition = new Vector3(lazerRange, lazer.transform.position.y, lazer.transform.position.z);
-                lazer.transform.position = lazerPosition;
+            Vector3 lazerPosition = new Vector3(lazerRange, lazer.transform.position.y, lazer.transform.position.z);
+            lazer.transform.position = lazerPosition;
 
-                float crateRange = Random.Range(-6f, -7f);
-                if (Random.Range(0, 2) == 0)
-                {
-                    crateRange = Random.Range(6f, 7f);
-                }
+            float crateRange = Random.Range(-6f, -7f);
+            if (Random.Range(0, 2) == 0)
+            {
+                crateRange = Random.Range(6f, 7f);
+            }
 
-                Vector3 cratePosition = new Vector3(lazerRange + crateRange, crate.transform.position.y, crate.transform.position.z);
-                crate.transform.position = cratePosition;
+            Vector3 cratePosition = new Vector3(lazerRange + crateRange, crate.transform.position.y, crate.transform.position.z);
+            crate.transform.position = cratePosition;
 
-                gunPiece.transform.position = new Vector3(gunRange, gunPiece.transform.position.y, gunPiece.transform.position.z);
-                
+            gunPiece.transform.position = new Vector3(gunRange, gunPiece.transform.position.y, gunPiece.transform.position.z);
+
 
             sensorToActivate.SetActive(true);
-        
+        }
     }
 
 
