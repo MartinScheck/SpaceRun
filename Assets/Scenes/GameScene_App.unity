@@ -9802,7 +9802,6 @@ MonoBehaviour:
   key: {fileID: 1854536047}
   gate: {fileID: 1763605388}
   gateBlocker: {fileID: 1223142934}
-  appHandler: {fileID: 0}
   healthText: {fileID: 612673147}
   scoreText: {fileID: 498200888}
   heroAudio: {fileID: 893587287}
@@ -15131,7 +15130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269570178}
   m_LocalRotation: {x: -0, y: -0, z: -0.0027984232, w: 0.9999961}
-  m_LocalPosition: {x: 0.9256816, y: 5.187895, z: -0.3533773}
+  m_LocalPosition: {x: 0.92, y: 4.71, z: -0.3533773}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20980,6 +20979,7 @@ GameObject:
   - component: {fileID: 1708734729}
   - component: {fileID: 1708734730}
   - component: {fileID: 1708734731}
+  - component: {fileID: 1708734732}
   m_Layer: 0
   m_Name: CameraFollower
   m_TagString: Untagged
@@ -21060,6 +21060,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 743956990}
   pauseIcon: {fileID: 1683516448}
+--- !u!61 &1708734732
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708734727}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.2677755, y: 8.372594}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 27.945032, y: 1.292757}
+  m_EdgeRadius: 0
 --- !u!1 &1743480704
 GameObject:
   m_ObjectHideFlags: 0
