@@ -36,7 +36,8 @@ public class BulletSkript : MonoBehaviour
         {
             HeroScript heroScript = hero.GetComponent<HeroScript>();
             heroScript.decreaseHealth(20);
-            
+            Destroy(gameObject);
+
         }
         else
         {
