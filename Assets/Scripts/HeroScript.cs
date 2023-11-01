@@ -32,6 +32,9 @@ public class HeroScript : MonoBehaviour
     public List<AudioClip> heroAudioClip;
     private float time = 0;
     private bool leftfoot = true;
+
+    public Joystick joystick;
+
     void Start()
     {
         oldHeroPosition = 0;
@@ -247,6 +250,8 @@ public class HeroScript : MonoBehaviour
 
         if (Input.GetKey("right") && blockControls == false)
         {
+
+
             currentHeroPosition = gameObject.transform.position.x;
             increaseScore();
             float distanceToMove = speed * Time.deltaTime;
@@ -279,7 +284,39 @@ public class HeroScript : MonoBehaviour
                 time = 0;
             }
         }
-        
+
+
+        if (!blockControls)
+        {
+            float horizontalInput = joystick.Horizontal; // Joystick-Eingabe für Links/Rechts
+            float distanceToMove = horizontalInput * speed * Time.deltaTime;
+            transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
+
+            if (horizontalInput != 0)
+            {
+                currentHeroPosition = transform.position.x;
+                increaseScore();
+
+                if (horizontalInput > 0)
+                {
+                    transform.localScale = new Vector3(1f, 1f, 1f); // Held schaut nach rechts
+                }
+                else if (horizontalInput < 0)
+                {
+                    transform.localScale = new Vector3(-1f, 1f, 1f); // Held schaut nach links
+                }
+
+                transitionState = 2;
+                anim.SetInteger("Trans", transitionState); // Starte die Bewegungsanimation
+
+                if (time >= 0.5f && onGround)
+                {
+                    Footstepsound();
+                    time = 0;
+                }
+            }
+
+        }
     }
 
     private void Footstepsound()
