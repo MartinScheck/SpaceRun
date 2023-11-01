@@ -13,29 +13,49 @@ public class GunScript : MonoBehaviour
 
     public GameObject gun;
     private Animator anim;
-    private Animator animState;
+    private bool shooting = false;
+
+
     public GameObject gunBullet;
     public GameObject gunBulletPosition;
 
     public float firetimedelay;
+
+    public AudioClip fireSound;
+    public AudioSource gunAudio;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = gun.GetComponent<Animator>();
         firetimedelay = 4;
-        //animState = Animator.StringToHash("GunFireAnimation");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        AnimatorStateInfo stateinfo = anim.GetCurrentAnimatorStateInfo(0);
+            
         distanztoHero = Vector3.Distance(gameObject.transform.position, hero.transform.position);
-        if (distanztoHero <= 20.0f)
+        if (distanztoHero <= 15.0f)
         {
             GunAiming();
             anim.SetBool("Scope", true);
+            
+            if(stateinfo.IsName("GunFireAnimation"))
+            {
+                
+                if(stateinfo.normalizedTime >= 0.78f && shooting)
+                {
+                   ShootNormalBullet();
+                   shooting = false;
+                }
+            }
+            else
+            {
+                shooting = true;
+            }
+
         }   
         else 
         {
@@ -49,20 +69,11 @@ public class GunScript : MonoBehaviour
         anim.SetFloat("Firetime",firetimedelay -= Time.deltaTime);
         if(firetimedelay < 1)
         {
-            if(distanztoHero <= 20.0f)
-            {
-                GunFireBullet();
-            }
-                
-            firetimedelay = 4;
+            
+            firetimedelay = 3.8f;
         }
     }
-    void GunFireBullet()
-    {
-
-        ShootNormalBullet();
-
-    }
+ 
 
     void GunAiming()
     {
@@ -90,6 +101,15 @@ public class GunScript : MonoBehaviour
     }
     public void ShootNormalBullet()
     {
+        
+        gunAudio.PlayOneShot(fireSound);
         Instantiate(gunBullet, gunBulletPosition.transform.position, Quaternion.identity);
+        
     }
+
+    public void OnGunFireAnimationEnd()
+    {
+       ShootNormalBullet();
+    }
+   
 }

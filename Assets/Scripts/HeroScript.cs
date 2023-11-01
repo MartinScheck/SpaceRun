@@ -43,7 +43,7 @@ public class HeroScript : MonoBehaviour
         score = -5;
 
         health = 100;
-        speed = 10.0f;
+        speed = 5.0f;
         lives = 3;
         blockControls = false;
         rb = GetComponent<Rigidbody2D>();
@@ -67,9 +67,9 @@ public class HeroScript : MonoBehaviour
         healthText.text = health + "";
     }
 
-    public void decreaseHealth()
+    public void decreaseHealth(int dmg = 10)
     {
-        health = health - 10;
+        health = health - dmg;
         
         
         if (health <= 0)

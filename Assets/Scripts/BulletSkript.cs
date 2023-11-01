@@ -7,6 +7,7 @@ public class BulletSkript : MonoBehaviour
     private GameObject hero;
     private Rigidbody2D rb;
     public float bulletForce;
+    private float bulletLiveTime;
   
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,26 @@ public class BulletSkript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        bulletLiveTime += Time.fixedDeltaTime;
+        if(bulletLiveTime >= 20.0f)
+        {
+            Destroy(gameObject);
+        }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Hero"))
+        {
+            HeroScript heroScript = hero.GetComponent<HeroScript>();
+            heroScript.decreaseHealth(20);
+            
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+       
+    }
+   
 
 }
