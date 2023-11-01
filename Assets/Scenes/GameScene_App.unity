@@ -10411,6 +10411,7 @@ MonoBehaviour:
   firetimedelay: 0
   fireSound: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   gunAudio: {fileID: 905432310}
+  chargeSound: {fileID: 8300000, guid: c4f24bb3e1531b44796fc33c46287cea, type: 3}
 --- !u!82 &905432310
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10422,7 +10423,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11882,6 +11883,7 @@ MonoBehaviour:
   firetimedelay: 0
   fireSound: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   gunAudio: {fileID: 1041789641}
+  chargeSound: {fileID: 8300000, guid: c4f24bb3e1531b44796fc33c46287cea, type: 3}
 --- !u!82 &1041789641
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11893,7 +11895,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -14473,6 +14475,7 @@ MonoBehaviour:
   firetimedelay: 0
   fireSound: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   gunAudio: {fileID: 1210916702}
+  chargeSound: {fileID: 8300000, guid: c4f24bb3e1531b44796fc33c46287cea, type: 3}
 --- !u!212 &1210916701
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20502,6 +20505,7 @@ MonoBehaviour:
   firetimedelay: 0
   fireSound: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   gunAudio: {fileID: 1664930596}
+  chargeSound: {fileID: 8300000, guid: c4f24bb3e1531b44796fc33c46287cea, type: 3}
 --- !u!82 &1664930596
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20513,7 +20517,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

@@ -8,10 +8,14 @@ public class BulletSkript : MonoBehaviour
     private Rigidbody2D rb;
     public float bulletForce;
     private float bulletLiveTime;
-  
+
+    public AudioClip bulletSound;
+    public AudioSource bulletAudio;
+
     // Start is called before the first frame update
     void Start()
     {
+        bulletAudio = gameObject.GetComponent<AudioSource>();
         bulletForce = 1.5f;
         rb = GetComponent<Rigidbody2D>();
         hero = GameObject.FindGameObjectWithTag("Hero");
@@ -35,6 +39,7 @@ public class BulletSkript : MonoBehaviour
         if (collision.gameObject.CompareTag("Hero"))
         {
             HeroScript heroScript = hero.GetComponent<HeroScript>();
+            bulletAudio.PlayOneShot(bulletSound);
             heroScript.decreaseHealth(20);
             Destroy(gameObject);
 
