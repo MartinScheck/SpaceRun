@@ -71,7 +71,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: bd92d31a85ea811459a4de2e1cc7596d, type: 2}
-  m_Tag: 
+  m_Tag: GunFireAnimation
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
