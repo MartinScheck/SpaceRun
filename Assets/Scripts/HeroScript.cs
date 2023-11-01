@@ -33,10 +33,13 @@ public class HeroScript : MonoBehaviour
     private float time = 0;
     private bool leftfoot = true;
 
+    private bool respawned;
+
     public Joystick joystick;
 
     void Start()
     {
+        respawned = false;
         rb = GetComponent<Rigidbody2D>();
         oldHeroPosition = 0;
         maxScore = 0;
@@ -52,6 +55,7 @@ public class HeroScript : MonoBehaviour
         heroAudio = GetComponent<AudioSource>();
         onGround = true;
         respawn();
+        respawned = false;
     }
 
     public void increaseHealth()
@@ -69,7 +73,16 @@ public class HeroScript : MonoBehaviour
 
     public void decreaseHealth()
     {
-        health = health - 10;
+
+        if (!respawned)
+        {
+            health = health - 10;
+        }
+        else
+        {
+            health = 100;
+            respawned = false;
+        }
         
         
         if (health <= 0)
@@ -96,7 +109,6 @@ public class HeroScript : MonoBehaviour
                // transitionState = 4;
                // anim.SetInteger("Trans", transitionState); // dying animation
                 respawn();
-                
             }
             
         }
@@ -195,6 +207,8 @@ public class HeroScript : MonoBehaviour
 
     public void respawn()
     {
+
+        respawned = true;
         Debug.Log("RESPAWN");
         anim.SetTrigger("Respawn");
         transform.position = new Vector3(respawnPoint.transform.position.x , respawnPoint.transform.position.y, respawnPoint.transform.position.z);
@@ -381,5 +395,15 @@ public class HeroScript : MonoBehaviour
     public int getScore()
     {
         return score;
+    }
+
+    public bool getRespawned()
+    {
+        return respawned;
+    }
+
+    public void setRespawned()
+    {
+        this.respawned = false;
     }
 }
