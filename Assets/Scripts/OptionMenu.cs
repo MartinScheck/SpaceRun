@@ -8,13 +8,15 @@ public class OptionMenu : MonoBehaviour
 {
 
     public GameObject buttonSound;
-    public GameObject buttonControlls;
+    public GameObject buttonHelp;
     public GameObject buttonReturn;
+
+
 
     void Start()
     {
         buttonSound.GetComponent<Button>().onClick.AddListener(Sound);
-        buttonControlls.GetComponent<Button>().onClick.AddListener(Controlls);
+        buttonHelp.GetComponent<Button>().onClick.AddListener(Help);
         buttonReturn.GetComponent<Button>().onClick.AddListener(ReturnToMainMenu);
     }
 
@@ -28,9 +30,9 @@ public class OptionMenu : MonoBehaviour
     {
         //toDo
     }
-    public void Controlls()
+    public void Help()
     {
-        //toDo
+        SceneManager.LoadScene("HelpSceneComputer");
     }
 
 }
