@@ -212,7 +212,7 @@ public class HeroScript : MonoBehaviour
         lives = 0;
         Debug.Log("GAME OVER");
 
-        if (SceneManager.GetActiveScene().name == "GameScene")
+        if (SceneManager.GetActiveScene().name == "GameScene_App")
         {
             SceneManager.LoadScene("GameOverScene");
         }
