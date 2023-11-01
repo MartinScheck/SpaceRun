@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu_MobileApp : MonoBehaviour
 {
 
     public GameObject buttonStart;
@@ -21,11 +21,11 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {   
         menuaudio.Stop();
-        SceneManager.LoadScene("GameScene_App");
+        SceneManager.LoadScene("GameScene_MobileApp");
     }
 
     public void Options()
     {
-        SceneManager.LoadScene("OptionScene");
+        SceneManager.LoadScene("OptionScene_MobileApp");
     }
 }

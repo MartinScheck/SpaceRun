@@ -210,9 +210,20 @@ public class HeroScript : MonoBehaviour
         heroAudio.PlayOneShot(heroAudioClip[8]);
         health = 0;
         lives = 0;
-        SceneManager.LoadScene("GameOverScene");
         Debug.Log("GAME OVER");
+
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOverScene_MobileApp");
+        }
+        
     }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -285,7 +296,7 @@ public class HeroScript : MonoBehaviour
         }
 
 
-        if (!blockControls)
+        if (!blockControls && joystick.isActiveAndEnabled)
         {
             float horizontalInput = joystick.Horizontal; // Joystick-Eingabe für Links/Rechts
             float verticalInput = joystick.Vertical;

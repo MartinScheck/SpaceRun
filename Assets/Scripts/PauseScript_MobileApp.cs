@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseScript : MonoBehaviour
+public class PauseScript_MobileApp : MonoBehaviour
 {
     public GameObject pauseMenu;
     public static bool isPaused;        //global var can be use to make sth
@@ -52,13 +52,13 @@ public class PauseScript : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("GameScene_App");
+        SceneManager.LoadScene("GameScene_MobileApp");
     }
 
     public void BacktoMenu()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("MenuScene_MobileApp");
     }
 
     public void QuitGame()

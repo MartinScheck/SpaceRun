@@ -9802,6 +9802,7 @@ MonoBehaviour:
   key: {fileID: 1854536047}
   gate: {fileID: 1763605388}
   gateBlocker: {fileID: 1223142934}
+  appHandler: {fileID: 0}
   healthText: {fileID: 612673147}
   scoreText: {fileID: 498200888}
   heroAudio: {fileID: 893587287}
