@@ -37,6 +37,7 @@ public class HeroScript : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         oldHeroPosition = 0;
         maxScore = 0;
         score = -5;
@@ -217,8 +218,6 @@ public class HeroScript : MonoBehaviour
     {
         if (Input.GetKeyDown("up") && onGround == true && blockControls == false)
         {
-
-            Rigidbody2D rb = GetComponent<Rigidbody2D>();
             // Add a vertical force to the player.
             rb.AddForce(new Vector2(0f, 9.0f), ForceMode2D.Impulse);
             onGround = false;
@@ -289,6 +288,7 @@ public class HeroScript : MonoBehaviour
         if (!blockControls)
         {
             float horizontalInput = joystick.Horizontal; // Joystick-Eingabe für Links/Rechts
+            float verticalInput = joystick.Vertical;
             float distanceToMove = horizontalInput * speed * Time.deltaTime;
             transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
 
@@ -315,6 +315,16 @@ public class HeroScript : MonoBehaviour
                     time = 0;
                 }
             }
+
+            if (verticalInput > 0 && onGround) 
+            {
+                rb.AddForce(new Vector2(0f, 9.0f), ForceMode2D.Impulse);
+                onGround = false;
+                anim.SetTrigger("Jump"); // jump animation
+
+                heroAudio.PlayOneShot(heroAudioClip[3]);
+            }
+
 
         }
     }
