@@ -378,6 +378,11 @@ public class HeroScript : MonoBehaviour
         heroAudio.PlayOneShot(heroAudioClip[9]);
     }
 
+    public void playGunBullesSound()
+    {
+        heroAudio.PlayOneShot(heroAudioClip[10]);
+    }
+
     public int getHealth()
     {
         return health;
@@ -400,6 +405,6 @@ public class HeroScript : MonoBehaviour
 
     public void setRespawned()
     {
-        this.respawned = false;
+        respawned = false;
     }
 }

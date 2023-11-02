@@ -9816,6 +9816,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6a17fcca7ee164b2c9db781c0f6b0a66, type: 3}
   - {fileID: 8300000, guid: 39c363e05a5eede45aa03a763dfc31b4, type: 3}
   - {fileID: 8300000, guid: e453f8e6683101544aa0e87008b0fdce, type: 3}
+  - {fileID: 8300000, guid: 0f23a13eebe34044bb0571f4308d812c, type: 3}
   joystick: {fileID: 1503438058}
 --- !u!95 &893587286
 Animator:

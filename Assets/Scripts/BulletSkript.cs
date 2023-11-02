@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BulletSkript : MonoBehaviour
 {
+
+    public HeroScript hs;
     private GameObject hero;
     private GameObject heroPosition;
     private Rigidbody2D rb;
@@ -21,6 +23,7 @@ public class BulletSkript : MonoBehaviour
         bulletForce = 6f;
         rb = GetComponent<Rigidbody2D>();
         hero = GameObject.FindGameObjectWithTag("Hero");
+        hs = hero.GetComponent<HeroScript>();
         heroPosition = GameObject.FindGameObjectWithTag("HeroHitBox");
         Vector3 direction = (heroPosition.transform.position - transform.position).normalized;
         rb.velocity = new Vector2(direction.x, direction.y) * bulletForce;
@@ -38,16 +41,21 @@ public class BulletSkript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Hero") || !collision.gameObject.CompareTag("Sensor"))
+        if (collision.gameObject.CompareTag("Hero"))
         {
-            HeroScript heroScript = hero.GetComponent<HeroScript>();
-            bulletAudio.PlayOneShot(bulletSound);
-            heroScript.decreaseHealth(20);
+            if(hs.getHealth() == 100)
+            {
+                hs.setRespawned();
+            }
+            hs.playGunBullesSound();
+            hs.decreaseHealth(20);
             Destroy(gameObject);
-
         }
-       
+        else if (collision.gameObject.CompareTag("GroundorTerrain"))
+        {
+            Destroy(gameObject);
+        }
+
     }
-   
 
 }
