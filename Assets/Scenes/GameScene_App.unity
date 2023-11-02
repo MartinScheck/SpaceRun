@@ -21444,7 +21444,7 @@ GameObject:
   - component: {fileID: 1768199048}
   m_Layer: 0
   m_Name: Prefab_Move_Sensor1
-  m_TagString: Ground
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
