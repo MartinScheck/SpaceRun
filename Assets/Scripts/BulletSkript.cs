@@ -16,6 +16,7 @@ public class BulletSkript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.SetActive(true);
         bulletAudio = gameObject.GetComponent<AudioSource>();
         bulletForce = 1.5f;
         rb = GetComponent<Rigidbody2D>();
