@@ -29,6 +29,7 @@ public class LazorSkript : MonoBehaviour
             if (timeSinceLastDamage >= dmgdelaytime)
             {
                 lazerAudioSource.PlayOneShot(lazerclip);
+  
                 if (!hero.getRespawned())
                 {
                     hero.decreaseHealth();

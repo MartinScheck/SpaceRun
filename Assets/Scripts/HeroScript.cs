@@ -33,6 +33,8 @@ public class HeroScript : MonoBehaviour
     private bool leftfoot = true;
 
     private bool respawned;
+    private bool gameover = false;
+    private float gameovertimer = 5.0f;
 
     public Joystick joystick;
 
@@ -76,49 +78,52 @@ public class HeroScript : MonoBehaviour
 
     public void decreaseHealth(int dmg = 10)
     {
-        if (!respawned)
+        if (!gameover)
         {
-            health = health - dmg;
-        }
-        else
-        {
-            health = 100;
-            respawned = false;
-        }
-        
-        
-        if (health <= 0)
-        {
-            health = 0;
-            lives--; 
-            
-            if (lives <= 0)
+            if (!respawned)
             {
-                livesbar.Hurt(1);
-                lives = 0;
-                transitionState = 4;
-                anim.SetInteger("Trans", transitionState); // dying animation
-                gameOver();
+                health = health - dmg;
             }
             else
             {
-                blockControls = true;
                 health = 100;
+                respawned = false;
+            }
+
+
+            if (health <= 0)
+            {
+                health = 0;
+                lives--;
+
+                if (lives <= 0)
+                {
+                    livesbar.Hurt(1);
+                    lives = 0;
+                    transitionState = 4;
+                    anim.SetTrigger("Fall"); // dying animation
+                    gameOver();
+                }
+                else
+                {
+                    blockControls = true;
+                    health = 100;
+                    setHealthColor();
+                    healthText.text = health + "";
+                    livesbar.Hurt(1);
+                    // transitionState = 4;
+                    // anim.SetInteger("Trans", transitionState); // dying animation
+                    respawn();
+                }
+
+            }
+            else
+            {
+                anim.SetTrigger("Dmg");
+                heroAudio.PlayOneShot(heroAudioClip[7]);
                 setHealthColor();
                 healthText.text = health + "";
-                livesbar.Hurt(1);
-               // transitionState = 4;
-               // anim.SetInteger("Trans", transitionState); // dying animation
-                respawn();
             }
-            
-        }
-        else
-        {
-            anim.SetTrigger("Dmg");
-            heroAudio.PlayOneShot(heroAudioClip[7]);
-            setHealthColor();
-            healthText.text = health + "";
         }
     }
 
@@ -225,8 +230,13 @@ public class HeroScript : MonoBehaviour
         heroAudio.PlayOneShot(heroAudioClip[8]);
         health = 0;
         lives = 0;
-        Debug.Log("GAME OVER");
+        blockControls = true;
+        gameover = true;
+        Debug.Log("GAME OVER");   
+    }
 
+    private void GameendScene()
+    {
         if (SceneManager.GetActiveScene().name == "GameScene_App")
         {
             SceneManager.LoadScene("GameOverScene");
@@ -235,9 +245,7 @@ public class HeroScript : MonoBehaviour
         {
             SceneManager.LoadScene("GameOverScene_MobileApp");
         }
-        
     }
-
 
     // Update is called once per frame
     void Update()
@@ -378,6 +386,16 @@ public class HeroScript : MonoBehaviour
             }
 
         }
+        if (gameover)
+        {
+            gameovertimer = gameovertimer - Time.deltaTime;
+            if(gameovertimer<= 0)
+            {
+                GameendScene();
+            }
+        }
+       
+            
     }
 
     private void Footstepsound()
