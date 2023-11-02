@@ -18,13 +18,13 @@ public class BulletSkript : MonoBehaviour
     {
         gameObject.SetActive(true);
         bulletAudio = gameObject.GetComponent<AudioSource>();
-        bulletForce = 1.5f;
+        bulletForce = 6f;
         rb = GetComponent<Rigidbody2D>();
         hero = GameObject.FindGameObjectWithTag("Hero");
         heroPosition = GameObject.FindGameObjectWithTag("HeroHitBox");
-        Vector3 direction = heroPosition.transform.position - transform.position;
+        Vector3 direction = (heroPosition.transform.position - transform.position).normalized;
         rb.velocity = new Vector2(direction.x, direction.y) * bulletForce;
-       
+
     }
 
     // Update is called once per frame

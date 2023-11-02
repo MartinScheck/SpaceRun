@@ -46,7 +46,7 @@ public class HeroScript : MonoBehaviour
         score = -5;
 
         health = 100;
-        speed = 5.0f;
+        speed = 8.0f;
         lives = 3;
         blockControls = false;
         rb = GetComponent<Rigidbody2D>();
