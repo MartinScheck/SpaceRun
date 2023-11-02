@@ -6586,7 +6586,7 @@ GameObject:
   - component: {fileID: 645096614}
   m_Layer: 0
   m_Name: Prefab_Move_Sensor4
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11544,7 +11544,7 @@ GameObject:
   - component: {fileID: 1002350803}
   m_Layer: 0
   m_Name: Prefab_Move_Sensor1 (1)
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12486,7 +12486,7 @@ GameObject:
   - component: {fileID: 1079312047}
   m_Layer: 0
   m_Name: Prefab_Move_Sensor2 (1)
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17415,7 +17415,7 @@ GameObject:
   - component: {fileID: 1456700586}
   m_Layer: 0
   m_Name: Prefab_Move_Sensor4 (1)
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19618,7 +19618,7 @@ GameObject:
   - component: {fileID: 1598341971}
   m_Layer: 0
   m_Name: Prefab_Move_Sensor2
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21444,7 +21444,7 @@ GameObject:
   - component: {fileID: 1768199048}
   m_Layer: 0
   m_Name: Prefab_Move_Sensor1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22649,7 +22649,7 @@ GameObject:
   - component: {fileID: 1867472520}
   m_Layer: 0
   m_Name: Prefab_Move_Sensor3
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24310,7 +24310,7 @@ GameObject:
   - component: {fileID: 1999884715}
   m_Layer: 0
   m_Name: Prefab_Move_Sensor3 (1)
-  m_TagString: Untagged
+  m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

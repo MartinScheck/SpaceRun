@@ -38,17 +38,13 @@ public class BulletSkript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Hero"))
+        if (collision.gameObject.CompareTag("Hero") || !collision.gameObject.CompareTag("Sensor"))
         {
             HeroScript heroScript = hero.GetComponent<HeroScript>();
             bulletAudio.PlayOneShot(bulletSound);
             heroScript.decreaseHealth(20);
             Destroy(gameObject);
 
-        }
-        else
-        {
-            Destroy(gameObject);
         }
        
     }

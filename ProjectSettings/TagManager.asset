@@ -8,6 +8,8 @@ TagManager:
   - Projectile
   - Object
   - GroundorTerrain
+  - HeroHitBox
+  - Sensor
   layers:
   - Default
   - TransparentFX
