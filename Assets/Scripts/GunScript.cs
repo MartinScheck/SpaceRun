@@ -14,7 +14,7 @@ public class GunScript : MonoBehaviour
     public GameObject gun;
     private Animator anim;
     private bool shooting = false;
-
+    private bool soundNotPlayed = false;
 
     public GameObject gunBullet;
     public GameObject gunBulletPosition;
@@ -23,6 +23,9 @@ public class GunScript : MonoBehaviour
 
     public AudioClip fireSound;
     public AudioSource gunAudio;
+
+    public AudioClip chargeSound;
+    AnimatorStateInfo stateinfo;
 
     // Start is called before the first frame update
     void Start()
@@ -34,11 +37,12 @@ public class GunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AnimatorStateInfo stateinfo = anim.GetCurrentAnimatorStateInfo(0);
+        stateinfo = anim.GetCurrentAnimatorStateInfo(0);
             
         distanztoHero = Vector3.Distance(gameObject.transform.position, hero.transform.position);
         if (distanztoHero <= 15.0f)
         {
+
             GunAiming();
             anim.SetBool("Scope", true);
             
@@ -77,6 +81,12 @@ public class GunScript : MonoBehaviour
 
     void GunAiming()
     {
+        if (stateinfo.IsName("GunChargeAnimation") && !soundNotPlayed)
+        {
+            gunAudio.PlayOneShot(chargeSound);
+            soundNotPlayed = true;
+        }
+
         Vector3 directionToTarget = hero.transform.position - gameObject.transform.position;
         // Berechne den Winkel im Bogenmaß (Radian) zwischen dem aktuellen Objekt und dem Ziel.
         float angleInRadians = Mathf.Atan2(directionToTarget.y, directionToTarget.x);
@@ -101,7 +111,7 @@ public class GunScript : MonoBehaviour
     }
     public void ShootNormalBullet()
     {
-        
+        soundNotPlayed = false;
         gunAudio.PlayOneShot(fireSound);
         Instantiate(gunBullet, gunBulletPosition.transform.position, Quaternion.identity);
         
