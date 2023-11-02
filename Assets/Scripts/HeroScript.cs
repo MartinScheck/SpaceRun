@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class HeroScript : MonoBehaviour
 {
-    private bool onGround;
     public float speed;
     private static int health;
     private static int lives;
@@ -37,6 +36,10 @@ public class HeroScript : MonoBehaviour
 
     public Joystick joystick;
 
+    private GroundCheckSkript groundcheck;
+
+    public float currentspeed = 0;
+
     void Start()
     {
         respawned = false;
@@ -53,7 +56,8 @@ public class HeroScript : MonoBehaviour
         rb.freezeRotation = true;
         anim = GetComponent<Animator>();
         heroAudio = GetComponent<AudioSource>();
-        onGround = true;
+        groundcheck = GetComponentInChildren<GroundCheckSkript>();
+        
         respawn();
         respawned = false;
     }
@@ -238,29 +242,31 @@ public class HeroScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("up") && onGround == true && blockControls == false)
+        if (groundcheck.IsGrounded() == false)
+        {
+            anim.SetBool("canJump",true);
+        }
+        else
+        {
+            anim.SetBool("canJump", false);
+            //anim.SetInteger("Trans", 1);
+        }
+
+        if (Input.GetKeyDown("up") && blockControls == false && groundcheck.IsGrounded())
         {
             // Add a vertical force to the player.
             rb.AddForce(new Vector2(0f, 9.0f), ForceMode2D.Impulse);
-            onGround = false;
-            anim.SetTrigger("Jump"); // jump animation
             
+            //anim.SetTrigger("Jump"); // jump animation
+            anim.SetBool("canJump", true);
+
             heroAudio.PlayOneShot(heroAudioClip[3]);
 
         }
-        if (Input.GetKeyUp("right") || Input.GetKeyUp("left"))
-        {
-            //heroAudio.PlayOneShot(heroAudioClip[2]);
-            transitionState = 1;
-            anim.SetInteger("Trans", transitionState); // stand animation
 
-        }
-        if (Input.GetKeyDown("down") && onGround == true)
+        if (Input.GetKeyDown("down") )
         {
             heroAudio.PlayOneShot(heroAudioClip[4]);
-            
-            onGround = true;
-
         }
 
     }
@@ -268,20 +274,32 @@ public class HeroScript : MonoBehaviour
     void FixedUpdate()
     {
         time = time + Time.deltaTime;
+        float previousHeroPosition = currentHeroPosition;
+        currentHeroPosition = gameObject.transform.position.x;
+        currentspeed = Mathf.Abs((currentHeroPosition - previousHeroPosition) / Time.deltaTime);
+        anim.SetFloat("speed", currentspeed);
+        if (currentspeed <= 0.05f && groundcheck.IsGrounded())
+        {
+            transitionState = 1;
+            anim.SetInteger("Trans", transitionState);
+        }
 
         if (Input.GetKey("right") && blockControls == false)
-        {
-
-
+        {        
             currentHeroPosition = gameObject.transform.position.x;
             increaseScore();
             float distanceToMove = speed * Time.deltaTime;
             transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
             transform.localScale = new Vector3(1f, 1f, 1f);
-            transitionState = 2;
-            anim.SetInteger("Trans", transitionState); // run animation right
+
+            if (groundcheck.IsGrounded())
+            {
+                transitionState = 2;
+                anim.SetInteger("Trans", transitionState); // run animation right
+            }
             
-            if (time >= 0.5f && onGround == true)
+            
+            if (time >= 0.5f && groundcheck.IsGrounded())
             {
                 Footstepsound();
                 time = 0;
@@ -296,10 +314,13 @@ public class HeroScript : MonoBehaviour
             transform.position = new Vector3(transform.position.x - distanceToMove, transform.position.y, transform.position.z);
             
             transform.localScale = new Vector3(-1f, 1f, 1f);
-            transitionState = 2;
-            anim.SetInteger("Trans", transitionState); // run animation left
+            if (groundcheck.IsGrounded())
+            {
+                transitionState = 2;
+                anim.SetInteger("Trans", transitionState); // run animation right
+            }
 
-            if (time >= 0.5f && onGround == true)
+            if (time >= 0.5f && groundcheck.IsGrounded())
             {
                 Footstepsound();
                 time = 0;
@@ -322,27 +343,36 @@ public class HeroScript : MonoBehaviour
                 if (horizontalInput > 0)
                 {
                     transform.localScale = new Vector3(1f, 1f, 1f); // Held schaut nach rechts
+                    if (groundcheck.IsGrounded())
+                    {
+                        transitionState = 2;
+                        anim.SetInteger("Trans", transitionState); // run animation right
+                    }
                 }
                 else if (horizontalInput < 0)
                 {
                     transform.localScale = new Vector3(-1f, 1f, 1f); // Held schaut nach links
+                    if (groundcheck.IsGrounded())
+                    {
+                        transitionState = 2;
+                        anim.SetInteger("Trans", transitionState); // run animation right
+                    }
                 }
+                
 
-                transitionState = 2;
-                anim.SetInteger("Trans", transitionState); // Starte die Bewegungsanimation
-
-                if (time >= 0.5f && onGround)
+                if (time >= 0.5f && groundcheck.IsGrounded())
                 {
                     Footstepsound();
                     time = 0;
                 }
             }
 
-            if (verticalInput > 0 && onGround) 
+            if (verticalInput > 0.1f && groundcheck.IsGrounded())
             {
+                Debug.Log(verticalInput);
                 rb.AddForce(new Vector2(0f, 9.0f), ForceMode2D.Impulse);
-                onGround = false;
-                anim.SetTrigger("Jump"); // jump animation
+
+                anim.SetBool("canJump", true);
 
                 heroAudio.PlayOneShot(heroAudioClip[3]);
             }
@@ -364,14 +394,6 @@ public class HeroScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-       onGround = true;
-       transitionState = 1;
-       anim.SetInteger("Trans", transitionState); // stand animation
-       //heroAudio.PlayOneShot(heroAudioClip[2]);
-
-    }
 
     public void playKeyCollectSound()
     {

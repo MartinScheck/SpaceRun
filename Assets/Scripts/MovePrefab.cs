@@ -92,7 +92,7 @@ public class MovePrefab : MonoBehaviour
             }
 
 
-            Debug.Log("movePrefab");
+           
 
             gameObject.SetActive(false);
             prefabToMove.transform.position = new Vector3(
@@ -141,7 +141,7 @@ public class MovePrefab : MonoBehaviour
             if (!gate.activeSelf && keyCS.getKeyCollected())
             {
 
-                Debug.Log("secretUnlocked");
+               
                 prefabIsMoved = true;
                 deactivator.SetActive(true);
 
@@ -152,7 +152,7 @@ public class MovePrefab : MonoBehaviour
 
                 gameObject.SetActive(false);
 
-                Debug.Log("secretPrefabMoved");
+                
                 secretPrefab.SetActive(true);
                 secretPrefab.transform.position = new Vector3(
                 gate.transform.position.x + 4.4025f,

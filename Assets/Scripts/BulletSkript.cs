@@ -34,7 +34,7 @@ public class BulletSkript : MonoBehaviour
     void Update()
     {
         bulletLiveTime += Time.fixedDeltaTime;
-        if(bulletLiveTime >= 20.0f)
+        if(bulletLiveTime >= 100.0f)
         {
             Destroy(gameObject);
         }
