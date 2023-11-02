@@ -66,7 +66,6 @@ public class HeroScript : MonoBehaviour
         {
             health = 100;
         }
-        Debug.Log("Health is: " + health);
         setHealthColor();
         healthText.text = health + "";
     }
@@ -103,7 +102,6 @@ public class HeroScript : MonoBehaviour
                 health = 100;
                 setHealthColor();
                 healthText.text = health + "";
-                Debug.Log("Lives decrease, health restored");
                 livesbar.Hurt(1);
                // transitionState = 4;
                // anim.SetInteger("Trans", transitionState); // dying animation
@@ -368,7 +366,6 @@ public class HeroScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       
        onGround = true;
        transitionState = 1;
        anim.SetInteger("Trans", transitionState); // stand animation
