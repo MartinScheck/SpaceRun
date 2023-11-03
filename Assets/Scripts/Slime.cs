@@ -18,7 +18,6 @@ public class Slime : MonoBehaviour
     public float distanceToMove;
 
     private float scaleSlime = 7.686088f;
-    private bool dmgOn = false;
 
     private int randomNumber = 1;
 
