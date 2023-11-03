@@ -41,6 +41,7 @@ public class HeroScript : MonoBehaviour
     private GroundCheckSkript groundcheck;
 
     public float currentspeed = 0;
+    float previousHeroPosition;
 
     private bool healthDecreaseSound;
 
@@ -61,7 +62,9 @@ public class HeroScript : MonoBehaviour
         anim = GetComponent<Animator>();
         heroAudio = GetComponent<AudioSource>();
         groundcheck = GetComponentInChildren<GroundCheckSkript>();
-        
+        previousHeroPosition = gameObject.transform.position.x;
+
+
         respawn();
         respawned = false;
     }
@@ -287,11 +290,13 @@ public class HeroScript : MonoBehaviour
     void FixedUpdate()
     {
         time = time + Time.deltaTime;
-        float previousHeroPosition = currentHeroPosition;
+        previousHeroPosition = currentHeroPosition;
         currentHeroPosition = gameObject.transform.position.x;
         currentspeed = Mathf.Abs((currentHeroPosition - previousHeroPosition) / Time.deltaTime);
         anim.SetFloat("speed", currentspeed);
-        if (currentspeed <= 0.05f && groundcheck.IsGrounded())
+        Debug.Log(currentspeed);
+
+        if (currentspeed <= 0.07f && groundcheck.IsGrounded())
         {
             transitionState = 1;
             anim.SetInteger("Trans", transitionState);
@@ -346,24 +351,27 @@ public class HeroScript : MonoBehaviour
             float horizontalInput = joystick.Horizontal; // Joystick-Eingabe für Links/Rechts
             float verticalInput = joystick.Vertical;
             float distanceToMove = horizontalInput * speed * Time.deltaTime;
-            transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
+            
 
             if (horizontalInput != 0)
             {
-                currentHeroPosition = transform.position.x;
-                increaseScore();
-
+                
                 if (horizontalInput > 0)
                 {
+                    currentHeroPosition = gameObject.transform.position.x;
+                    transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
                     transform.localScale = new Vector3(1f, 1f, 1f); // Held schaut nach rechts
                     if (groundcheck.IsGrounded())
-                    {
+                    {   
+                        increaseScore();
                         transitionState = 2;
                         anim.SetInteger("Trans", transitionState); // run animation right
                     }
                 }
                 else if (horizontalInput < 0)
                 {
+                    currentHeroPosition = gameObject.transform.position.x;
+                    transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
                     transform.localScale = new Vector3(-1f, 1f, 1f); // Held schaut nach links
                     if (groundcheck.IsGrounded())
                     {
@@ -372,7 +380,6 @@ public class HeroScript : MonoBehaviour
                     }
                 }
                 
-
                 if (time >= 0.5f && groundcheck.IsGrounded())
                 {
                     Footstepsound();
