@@ -10,6 +10,8 @@ TagManager:
   - GroundorTerrain
   - HeroHitBox
   - Sensor
+  - Enemy
+  - leftWall
   layers:
   - Default
   - TransparentFX
@@ -49,6 +51,9 @@ TagManager:
     locked: 0
   - name: Level
     uniqueID: 3231877521
+    locked: 0
+  - name: Enemy
+    uniqueID: 1783944619
     locked: 0
   - name: Character
     uniqueID: 37193677
