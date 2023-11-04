@@ -210,7 +210,7 @@ public class HeroScript : MonoBehaviour
     private void activateKey()
     {
 
-        if (score == 150)
+        if (score == Random.Range(200, 400))
         {
             int randomValuex = (int)Random.Range(currentHeroPosition, currentHeroPosition * 2);
             float randomValuey = Random.Range(0f, 0.8f);
