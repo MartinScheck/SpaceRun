@@ -48,6 +48,12 @@ public class HeroScript : MonoBehaviour
     public float previousHeroPosition;
     private bool iscrouching = false;
 
+    private float colliderYsizeSmall = 1.987017f;
+    private float colliderYoffsetSmall = -1.710181f;
+
+    private float colliderYsizeNormal = 3.468915f;
+    private float colliderYoffsetNormal = -0.9672953f;
+
 
     private bool healthDecreaseSound;
 
@@ -61,7 +67,7 @@ public class HeroScript : MonoBehaviour
 
         health = 100;
         speed = 8.0f;
-       
+
         lives = 3;
         blockControls = false;
         rb = GetComponent<Rigidbody2D>();
@@ -146,15 +152,15 @@ public class HeroScript : MonoBehaviour
 
     private void setHealthColor()
     {
-        if(health >= 75)
+        if (health >= 75)
         {
             healthText.color = Color.green;
         }
-        if(health < 75 && health >= 30)
+        if (health < 75 && health >= 30)
         {
             healthText.color = Color.yellow;
         }
-        if(health < 30)
+        if (health < 30)
         {
             healthText.color = Color.red;
         }
@@ -179,15 +185,15 @@ public class HeroScript : MonoBehaviour
     public void increaseScore()
     {
 
-        if(maxScore <= currentHeroPosition)
+        if (maxScore <= currentHeroPosition)
         {
-            if(maxScore < 0)
+            if (maxScore < 0)
             {
                 score = 0;
             }
             else
             {
-                if(currentHeroPosition > oldHeroPosition)
+                if (currentHeroPosition > oldHeroPosition)
                 {
                     score = (int)currentHeroPosition;
                     setScoreColor();
@@ -204,9 +210,9 @@ public class HeroScript : MonoBehaviour
     private void activateKey()
     {
 
-        if(score == 150)
+        if (score == 150)
         {
-            int randomValuex = (int) Random.Range(currentHeroPosition, currentHeroPosition *2);
+            int randomValuex = (int)Random.Range(currentHeroPosition, currentHeroPosition * 2);
             float randomValuey = Random.Range(0f, 0.8f);
             activateGate(randomValuex);
             key.transform.position = new Vector3(currentHeroPosition + randomValuex, key.transform.position.y + randomValuey, key.transform.position.z);
@@ -233,7 +239,7 @@ public class HeroScript : MonoBehaviour
         respawned = true;
         Debug.Log("RESPAWN");
         anim.SetTrigger("Respawn");
-        transform.position = new Vector3(respawnPoint.transform.position.x , respawnPoint.transform.position.y, respawnPoint.transform.position.z);
+        transform.position = new Vector3(respawnPoint.transform.position.x, respawnPoint.transform.position.y, respawnPoint.transform.position.z);
         transform.localScale = new Vector3(1f, 1f, 1f);
         blockControls = false;
         heroAudio.PlayOneShot(heroAudioClip[5]);
@@ -248,7 +254,7 @@ public class HeroScript : MonoBehaviour
         lives = 0;
         blockControls = true;
         gameover = true;
-        Debug.Log("GAME OVER");   
+        Debug.Log("GAME OVER");
     }
 
     private void GameendScene()
@@ -263,12 +269,12 @@ public class HeroScript : MonoBehaviour
         }
     }
 
-   
+
     void Update()
     {
         if (groundcheck.IsGrounded() == false && crouchCheckScript.CanNotStand() == false && iscrouching == false)
         {
-            anim.SetBool("canJump",true);
+            anim.SetBool("canJump", true);
         }
         else
         {
@@ -284,11 +290,11 @@ public class HeroScript : MonoBehaviour
                 heroAudio.PlayOneShot(heroAudioClip[3]);
             }
 
-            if (Input.GetKeyDown("down"))
+            if (Input.GetKeyDown("down") && groundcheck.IsGrounded())
             {
                 speed = crouchspeed;
                 heroAudio.PlayOneShot(heroAudioClip[4]);
-                upperCollider.enabled = false;
+                setCollidersmall(true);
                 anim.SetBool("crouch", true);
                 anim.SetBool("canJump", false);
                 iscrouching = true;
@@ -298,7 +304,7 @@ public class HeroScript : MonoBehaviour
             {
                 if (crouchCheckScript.CanNotStand() == false)
                 {
-                    upperCollider.enabled = true;
+                    setCollidersmall(false);
                     speed = normalspeed;
                     anim.SetBool("crouch", false);
                     iscrouching = false;
@@ -307,13 +313,13 @@ public class HeroScript : MonoBehaviour
                 }
                 else
                 {
-                    upperCollider.enabled = false;
+                    setCollidersmall(true);
                     anim.SetBool("crouch", true);
                 }
 
             }
         }
-}
+    }
 
     void FixedUpdate()
     {
@@ -381,14 +387,14 @@ public class HeroScript : MonoBehaviour
             float horizontalInput = joystick.Horizontal; // Joystick-Eingabe für Links/Rechts
             float verticalInput = joystick.Vertical;
             float distanceToMove = horizontalInput * speed * Time.deltaTime;
-            
+
 
             if (horizontalInput != 0)
             {
 
                 if (crouchCheckScript.CanNotStand() == false)
                 {
-                    upperCollider.enabled = true;
+                    setCollidersmall(false);
                     speed = normalspeed;
                     anim.SetBool("crouch", false);
                     iscrouching = false;
@@ -397,7 +403,7 @@ public class HeroScript : MonoBehaviour
                 }
                 else
                 {
-                    upperCollider.enabled = false;
+                    setCollidersmall(false);
                     anim.SetBool("crouch", true);
                 }
 
@@ -407,7 +413,7 @@ public class HeroScript : MonoBehaviour
                     transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
                     transform.localScale = new Vector3(1f, 1f, 1f); // Held schaut nach rechts
                     if (groundcheck.IsGrounded() && iscrouching == false)
-                    {   
+                    {
                         increaseScore();
                         transitionState = 2;
                         anim.SetInteger("Trans", transitionState); // run animation right
@@ -424,7 +430,7 @@ public class HeroScript : MonoBehaviour
                         anim.SetInteger("Trans", transitionState); // run animation right
                     }
                 }
-                
+
                 if (time >= 0.5f && groundcheck.IsGrounded())
                 {
                     Footstepsound();
@@ -432,7 +438,7 @@ public class HeroScript : MonoBehaviour
                 }
             }
 
-            if (verticalInput > 0.17f && groundcheck.IsGrounded() && crouchCheckScript.CanNotStand() == false)
+            if (verticalInput > 0.4f && groundcheck.IsGrounded() && crouchCheckScript.CanNotStand() == false)
             {
                 Debug.Log(verticalInput);
                 rb.AddForce(new Vector2(0f, 9.0f), ForceMode2D.Impulse);
@@ -442,27 +448,43 @@ public class HeroScript : MonoBehaviour
 
             }
 
-            if (verticalInput < -0.50f && iscrouching == false)
+            if (verticalInput < -0.4f && iscrouching == false && groundcheck.IsGrounded())
             {
                 speed = crouchspeed;
-                //heroAudio.PlayOneShot(heroAudioClip[4]);
-                upperCollider.enabled = false;
+                setCollidersmall(true);
                 anim.SetBool("crouch", true);
                 anim.SetBool("canJump", false);
                 iscrouching = true;
             }
-           
+            if(verticalInput >= -0.4f && verticalInput <= 0.4f)
+            {
+                if (crouchCheckScript.CanNotStand() == false)
+                {
+                    setCollidersmall(false);
+                    speed = normalspeed;
+                    anim.SetBool("crouch", false);
+                    iscrouching = false;
+
+
+                }
+                else
+                {
+                    setCollidersmall(true);
+                    anim.SetBool("crouch", true);
+                }
+            }
+
         }
         if (gameover)
         {
             gameovertimer = gameovertimer - Time.deltaTime;
-            if(gameovertimer<= 0)
+            if (gameovertimer <= 0)
             {
                 GameendScene();
             }
         }
-       
-            
+
+
     }
 
     private void Footstepsound()
@@ -513,5 +535,19 @@ public class HeroScript : MonoBehaviour
     public void setRespawned()
     {
         respawned = false;
+    }
+
+    public void setCollidersmall(bool on)
+    {
+        if(on)
+        {
+            upperCollider.size = new Vector2(upperCollider.size.x, colliderYsizeSmall);
+            upperCollider.offset = new Vector2(upperCollider.offset.x, colliderYoffsetSmall);
+        }
+        else
+        {
+            upperCollider.size = new Vector2(upperCollider.size.x, colliderYsizeNormal);
+            upperCollider.offset = new Vector2(upperCollider.offset.x, colliderYoffsetNormal);
+        }
     }
 }
