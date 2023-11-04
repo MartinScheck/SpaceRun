@@ -49,6 +49,8 @@ public class HeroScript : MonoBehaviour
     private bool iscrouching = false;
 
 
+    private bool healthDecreaseSound;
+
     void Start()
     {
         respawned = false;
@@ -131,8 +133,11 @@ public class HeroScript : MonoBehaviour
             }
             else
             {
+                if (health % 5 == 0)
+                {
+                    heroAudio.PlayOneShot(heroAudioClip[7]);
+                }
                 anim.SetTrigger("Dmg");
-                heroAudio.PlayOneShot(heroAudioClip[7]);
                 setHealthColor();
                 healthText.text = health + "";
             }
