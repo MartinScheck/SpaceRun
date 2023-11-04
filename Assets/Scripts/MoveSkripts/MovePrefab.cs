@@ -15,6 +15,7 @@ public class MovePrefab : MonoBehaviour
     public GameObject gate;
 
     public GameObject slime;
+    public GameObject bat;
 
     public GameObject light_L01;
     public GameObject light_L02;
@@ -128,6 +129,11 @@ public class MovePrefab : MonoBehaviour
             Vector3 slimePosition = new Vector3(slimeRange, slime.transform.position.y, slime.transform.position.z);
             slime.transform.position = slimePosition;
 
+            float batRange = Random.Range(-3, 4);
+            Vector3 batRangePosition = new Vector3(bat.gameObject.transform.position.x + deltaX, batRange, bat.transform.position.z);
+            bat.transform.position = batRangePosition;
+
+
             Vector3 cratePosition = new Vector3(lazerRange + crateRange, crate.transform.position.y, crate.transform.position.z);
             crate.transform.position = cratePosition;
 
@@ -178,6 +184,15 @@ public class MovePrefab : MonoBehaviour
         crate.SetActive(random() && random());
 
         slime.SetActive(random() && random());
+
+        if (!bat.activeSelf)
+        {
+            bat.SetActive(true);
+        }
+        else
+        {
+            bat.SetActive(false);
+        }
 
         gunPiece.SetActive(random());
     }
