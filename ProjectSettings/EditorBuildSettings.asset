@@ -4,5 +4,35 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Windows/MenuScene.unity
+    guid: f6fc4b86974d58747816403e411fedac
+  - enabled: 0
+    path: Assets/Scenes/Windows/OptionScene.unity
+    guid: 89a269d7442267b4a8ddd73e9cb6afd2
+  - enabled: 0
+    path: Assets/Scenes/Windows/HelpSceneComputer.unity
+    guid: d7a0907aa2995154b91eb75602e9fa5b
+  - enabled: 0
+    path: Assets/Scenes/Windows/GameScene_App.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/Windows/GameOverScene.unity
+    guid: 08fbc8946e4305f4e85e24c646ad9e30
+  - enabled: 1
+    path: Assets/Scenes/Mobile/GameOverScene_MobileApp.unity
+    guid: 149e154fa27054d4389ee0f1633fafea
+  - enabled: 1
+    path: Assets/Scenes/Mobile/GameScene_MobileApp.unity
+    guid: bac11d9655b1789449eb82e28efe7cfc
+  - enabled: 1
+    path: Assets/Scenes/Mobile/HelpScene_MobileApp.unity
+    guid: 53ff3935e95634641b5394d16a837d6a
+  - enabled: 1
+    path: Assets/Scenes/Mobile/MenuScene_MobileApp.unity
+    guid: bd06de9fcfbd0cc4c9022617cbabd84c
+  - enabled: 1
+    path: Assets/Scenes/Mobile/OptionScene_MobileApp.unity
+    guid: c1d522acc94b5204e90e91b9a3f1f1fb
   m_configObjects: {}
