@@ -1236,7 +1236,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -16.536186, y: -0.77165604}
+  m_Offset: {x: -15.866959, y: -0.77165604}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1247,7 +1247,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3143158, y: 40.60726}
+  m_Size: {x: 3.652771, y: 40.60726}
   m_EdgeRadius: 0
 --- !u!1 &150064382
 GameObject:
@@ -6319,6 +6319,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &598249891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598249892}
+  - component: {fileID: 598249893}
+  m_Layer: 0
+  m_Name: CrouchCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &598249892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598249891}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.07800001, y: -0.46000004, z: -0.08049393}
+  m_LocalScale: {x: 1.0177, y: 2.05972, z: 1.0177}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 880145083}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &598249893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598249891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1a485410a05a243b7b3c01c145e421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &599992759
 GameObject:
   m_ObjectHideFlags: 0
@@ -10267,13 +10314,13 @@ GameObject:
   - component: {fileID: 880145083}
   - component: {fileID: 880145082}
   - component: {fileID: 880145081}
-  - component: {fileID: 880145080}
   - component: {fileID: 880145079}
   - component: {fileID: 880145078}
   - component: {fileID: 880145077}
   - component: {fileID: 880145076}
   - component: {fileID: 880145075}
   - component: {fileID: 880145074}
+  - component: {fileID: 880145080}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Hero
@@ -10451,6 +10498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  normalspeed: 8
   livesbar: {fileID: 880145074}
   respawnPoint: {fileID: 1993424731}
   key: {fileID: 1854536047}
@@ -10473,6 +10521,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0f23a13eebe34044bb0571f4308d812c, type: 3}
   joystick: {fileID: 1503438058}
   currentspeed: 0
+  previousHeroPosition: 0
 --- !u!70 &880145080
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10486,8 +10535,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.055045485, y: -1.1948643}
-  m_Size: {x: 1.7247119, y: 3.0176506}
+  m_Offset: {x: -0.05519414, y: -0.614872}
+  m_Size: {x: 1.7205741, y: 2.7640686}
   m_Direction: 0
 --- !u!50 &880145081
 Rigidbody2D:
@@ -10574,8 +10623,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2000183711}
+  - {fileID: 598249892}
   - {fileID: 819626226}
+  - {fileID: 2000183711}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23945,7 +23995,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 40.426525, y: -6.6798263}
+  m_Offset: {x: 50.65503, y: -6.6798263}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -23956,7 +24006,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 109.53678, y: 2.1629438}
+  m_Size: {x: 129.99377, y: 2.1629438}
   m_EdgeRadius: 0
 --- !u!1 &1885859244
 GameObject:
