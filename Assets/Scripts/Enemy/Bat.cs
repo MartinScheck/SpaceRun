@@ -49,7 +49,7 @@ public class Bat : MonoBehaviour
 
     }
 
-        public void Animation_1_Idle()
+    public void Animation_1_Idle()
     {
         anim.SetBool("Run", false);
     }

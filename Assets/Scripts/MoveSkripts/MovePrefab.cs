@@ -131,7 +131,7 @@ public class MovePrefab : MonoBehaviour
             slime.transform.position = slimePosition;
 
             float batRange = Random.Range(-3, 4);
-            Vector3 batRangePosition = new Vector3(bat.gameObject.transform.position.x + deltaX, batRange, bat.transform.position.z);
+            Vector3 batRangePosition = new Vector3(bat.gameObject.transform.position.x + deltaX + 40, batRange, bat.transform.position.z);
             bat.transform.position = batRangePosition;
 
 
