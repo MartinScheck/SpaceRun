@@ -55,21 +55,11 @@ public class HeroScript : MonoBehaviour
     private float colliderYoffsetNormal = -0.9672953f;
 
     private bool audiotimer;
-    private bool healthDecreaseSound;
     private float audiotimerdelay = 5;
 
     void Start()
     {
-        respawned = false;
         rb = GetComponent<Rigidbody2D>();
-        oldHeroPosition = 0;
-        maxScore = 0;
-        score = -5;
-
-        health = 100;
-        speed = 5.0f;
-
-        lives = 3;
         blockControls = false;
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
@@ -79,8 +69,17 @@ public class HeroScript : MonoBehaviour
         crouchCheckScript = GetComponentInChildren<CrouchCheckScript>();
         previousHeroPosition = gameObject.transform.position.x;
         upperCollider = GetComponent<CapsuleCollider2D>();
+        
+        
+       
+        oldHeroPosition = 0;
+        maxScore = 0;
+        score = -5;
+        health = 100;
+        speed = 5.0f;
         normalspeed = speed;
         crouchspeed = speed / 2;
+        lives = 3;
         respawn();
         respawned = false;
     }
@@ -329,7 +328,6 @@ public class HeroScript : MonoBehaviour
         currentHeroPosition = gameObject.transform.position.x;
         currentspeed = Mathf.Abs((currentHeroPosition - previousHeroPosition) / Time.deltaTime);
         anim.SetFloat("speed", currentspeed);
-        Debug.Log(currentspeed);
 
         if (currentspeed <= 0.07f && groundcheck.IsGrounded())
         {
