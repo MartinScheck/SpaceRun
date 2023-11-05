@@ -27,7 +27,6 @@ public class Bat : MonoBehaviour
         Animation_1_Idle();
         // Setze die Zeit für die nächste Richtungsänderung
         nextChangeTime = Time.deltaTime + Random.Range(10.0f, randomChangeInterval);
-        Debug.Log(nextChangeTime);
     }
 
     void FixedUpdate()
@@ -47,9 +46,6 @@ public class Bat : MonoBehaviour
               distanceToMove = speed;
               gameObject.transform.position = new Vector3(gameObject.transform.position.x - (distanceToMove), gameObject.transform.position.y, gameObject.transform.position.z);   
         }
-
-        Debug.Log(timer);
-        Debug.Log(randomMaxTimer);
 
     }
 
@@ -78,7 +74,7 @@ public class Bat : MonoBehaviour
         {
             Animation_1_Idle();
             anim.SetTrigger("Attack");
-            hero.decreaseHealth(5);
+            hero.decreaseHealth(30);
         }
         else
         {

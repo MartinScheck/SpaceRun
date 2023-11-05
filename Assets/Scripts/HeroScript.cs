@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class HeroScript : MonoBehaviour
 {
     public float speed;
-    private float crouchspeed = 4.0f;
-    public float normalspeed = 8.0f;
+    private float crouchspeed;
+    public float normalspeed;
     private static int health;
     private static int lives;
     private static int score;
@@ -54,8 +54,9 @@ public class HeroScript : MonoBehaviour
     private float colliderYsizeNormal = 3.468915f;
     private float colliderYoffsetNormal = -0.9672953f;
 
-
+    private bool audiotimer;
     private bool healthDecreaseSound;
+    private float audiotimerdelay = 5;
 
     void Start()
     {
@@ -66,7 +67,7 @@ public class HeroScript : MonoBehaviour
         score = -5;
 
         health = 100;
-        speed = 8.0f;
+        speed = 5.0f;
 
         lives = 3;
         blockControls = false;
@@ -78,6 +79,9 @@ public class HeroScript : MonoBehaviour
         crouchCheckScript = GetComponentInChildren<CrouchCheckScript>();
         previousHeroPosition = gameObject.transform.position.x;
         upperCollider = GetComponent<CapsuleCollider2D>();
+        normalspeed = speed;
+        crouchspeed = speed / 2;
+       
 
 
         respawn();
@@ -378,6 +382,12 @@ public class HeroScript : MonoBehaviour
                     Footstepsound();
                     time = 0;
                 }
+            }
+
+            if(audiotimer == true)
+            {
+                audiotimerdelay = audiotimerdelay - Time.deltaTime;
+                audiotimerdelay = 5;
             }
         }
 

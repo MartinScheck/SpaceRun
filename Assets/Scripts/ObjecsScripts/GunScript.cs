@@ -74,7 +74,7 @@ public class GunScript : MonoBehaviour
         if(firetimedelay < 1)
         {
             
-            firetimedelay = 3.8f;
+            firetimedelay = 3.4f;
         }
     }
  

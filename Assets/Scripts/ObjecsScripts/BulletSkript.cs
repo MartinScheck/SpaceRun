@@ -20,7 +20,7 @@ public class BulletSkript : MonoBehaviour
     {
         gameObject.SetActive(true);
         bulletAudio = gameObject.GetComponent<AudioSource>();
-        bulletForce = 6f;
+        bulletForce = 16.0f;
         rb = GetComponent<Rigidbody2D>();
         hero = GameObject.FindGameObjectWithTag("Hero");
         hs = hero.GetComponent<HeroScript>();
@@ -34,10 +34,19 @@ public class BulletSkript : MonoBehaviour
     void Update()
     {
         bulletLiveTime += Time.fixedDeltaTime;
-        if(bulletLiveTime >= 100.0f)
+        if(bulletLiveTime >= 18.0f)
         {
             Destroy(gameObject);
         }
+        
+        heroPosition = GameObject.FindGameObjectWithTag("HeroHitBox");
+        Vector3 direction = (heroPosition.transform.position - transform.position).normalized;
+        if(direction.x > 1.5 && direction.y > 1.5)
+        {
+            rb.velocity = new Vector2(direction.x, direction.y) * (bulletForce);
+        }
+       
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
