@@ -81,9 +81,6 @@ public class HeroScript : MonoBehaviour
         upperCollider = GetComponent<CapsuleCollider2D>();
         normalspeed = speed;
         crouchspeed = speed / 2;
-       
-
-
         respawn();
         respawned = false;
     }
@@ -91,7 +88,7 @@ public class HeroScript : MonoBehaviour
     public void increaseHealth()
     {
         health = health + 10;
-        heroAudio.PlayOneShot(heroAudioClip[6]);
+        playclipVolumes(6);
         if (health >= 100)
         {
             health = 100;
@@ -145,7 +142,7 @@ public class HeroScript : MonoBehaviour
             {
                 if (health % 5 == 0)
                 {
-                    heroAudio.PlayOneShot(heroAudioClip[7]);
+                    playclipVolumes(7);
                 }
                 anim.SetTrigger("Dmg");
                 setHealthColor();
@@ -246,14 +243,14 @@ public class HeroScript : MonoBehaviour
         transform.position = new Vector3(respawnPoint.transform.position.x, respawnPoint.transform.position.y, respawnPoint.transform.position.z);
         transform.localScale = new Vector3(1f, 1f, 1f);
         blockControls = false;
-        heroAudio.PlayOneShot(heroAudioClip[5]);
+        playclipVolumes(5);
         health = 100;
         healthText.text = health + "";
     }
 
     public void gameOver()
     {
-        heroAudio.PlayOneShot(heroAudioClip[8]);
+        playclipVolumes(8);
         health = 0;
         lives = 0;
         blockControls = true;
@@ -291,13 +288,13 @@ public class HeroScript : MonoBehaviour
             {
                 rb.AddForce(new Vector2(0f, 9.0f), ForceMode2D.Impulse);
                 anim.SetBool("canJump", true);
-                heroAudio.PlayOneShot(heroAudioClip[3]);
+                playclipVolumes(3);
             }
 
             if (Input.GetKeyDown("down") && groundcheck.IsGrounded())
             {
                 speed = crouchspeed;
-                heroAudio.PlayOneShot(heroAudioClip[4]);
+                playclipVolumes(4);
                 setCollidersmall(true);
                 anim.SetBool("crouch", true);
                 anim.SetBool("canJump", false);
@@ -454,7 +451,7 @@ public class HeroScript : MonoBehaviour
                 rb.AddForce(new Vector2(0f, 9.0f), ForceMode2D.Impulse);
 
                 anim.SetBool("canJump", true);
-                heroAudio.PlayOneShot(heroAudioClip[3]);
+                playclipVolumes(3);
 
             }
 
@@ -501,12 +498,12 @@ public class HeroScript : MonoBehaviour
     {
         if (leftfoot)
         {
-            heroAudio.PlayOneShot(heroAudioClip[0]);
+            playclipVolumes(0);
             leftfoot = false;
         }
         else
         {
-            heroAudio.PlayOneShot(heroAudioClip[1]);
+            playclipVolumes(1);
             leftfoot = true;
         }
     }
@@ -514,12 +511,12 @@ public class HeroScript : MonoBehaviour
 
     public void playKeyCollectSound()
     {
-        heroAudio.PlayOneShot(heroAudioClip[9]);
+        playclipVolumes(9);
     }
 
     public void playGunBullesSound()
     {
-        heroAudio.PlayOneShot(heroAudioClip[10]);
+        playclipVolumes(10);
     }
 
     public int getHealth()
@@ -559,5 +556,52 @@ public class HeroScript : MonoBehaviour
             upperCollider.size = new Vector2(upperCollider.size.x, colliderYsizeNormal);
             upperCollider.offset = new Vector2(upperCollider.offset.x, colliderYoffsetNormal);
         }
+    }
+
+    public void playclipVolumes(int clipNumber )
+    {
+        float stepsound = 0.2f;
+        switch (clipNumber)
+        {
+            case 0:
+                heroAudio.volume = stepsound; // run left
+                break;
+            case 1:
+                heroAudio.volume = stepsound; // run right
+                break;
+            case 2:
+                heroAudio.volume = stepsound; // jump start
+                break;
+            case 3:
+                heroAudio.volume = 0.05f; // jump (mario)
+                break;
+            case 4:
+                heroAudio.volume = stepsound; // jump land
+                break;
+            case 5:
+                heroAudio.volume = 0.05f; // respawn
+                break;
+            case 6:
+                heroAudio.volume = 0.2f; // live increase
+                break;
+            case 7:
+                heroAudio.volume = 0.2f; // dmg (live deacrease)
+                break;
+            case 8:
+                heroAudio.volume = 1.0f; // gameover
+                break;
+            case 9:
+                heroAudio.volume = 0.7f; // key
+                break;
+            case 10:
+                heroAudio.volume = 1.0f; // bullethitsound
+                break;
+            default:
+                heroAudio.volume = 1.0f;
+                break;
+        }
+
+
+        heroAudio.PlayOneShot(heroAudioClip[clipNumber]);
     }
 }

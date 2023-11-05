@@ -10407,9 +10407,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 39c363e05a5eede45aa03a763dfc31b4, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11121,7 +11121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bc82fca624814449188183c0a15201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 893587279}
+  hero: {fileID: 542673465}
   distanztoHero: 0
   rotationSpeed: 30
   gun: {fileID: 212477419}
@@ -11143,7 +11143,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12834,7 +12834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bc82fca624814449188183c0a15201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 893587279}
+  hero: {fileID: 542673465}
   distanztoHero: 0
   rotationSpeed: 30
   gun: {fileID: 1587290835}
@@ -12856,7 +12856,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15566,7 +15566,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -22069,7 +22069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bc82fca624814449188183c0a15201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 893587279}
+  hero: {fileID: 542673465}
   distanztoHero: 0
   rotationSpeed: 30
   gun: {fileID: 1478402930}
@@ -22091,7 +22091,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
