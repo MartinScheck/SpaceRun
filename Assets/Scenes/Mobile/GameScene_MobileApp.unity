@@ -10351,7 +10351,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d32502bfd969f2645b55dcd0547b88e9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.085
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11170,7 +11170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bc82fca624814449188183c0a15201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 880145073}
+  hero: {fileID: 819626225}
   distanztoHero: 0
   rotationSpeed: 30
   gun: {fileID: 212477419}
@@ -11192,7 +11192,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12592,7 +12592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bc82fca624814449188183c0a15201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 880145073}
+  hero: {fileID: 819626225}
   distanztoHero: 0
   rotationSpeed: 30
   gun: {fileID: 1587290835}
@@ -12614,7 +12614,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -14939,7 +14939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bc82fca624814449188183c0a15201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 880145073}
+  hero: {fileID: 819626225}
   distanztoHero: 0
   rotationSpeed: 30
   gun: {fileID: 965775523}
@@ -15013,7 +15013,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15572,7 +15572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269570178}
   m_LocalRotation: {x: -0, y: -0, z: -0.0027984232, w: 0.9999961}
-  m_LocalPosition: {x: 0.93, y: 5.98, z: -0.3533773}
+  m_LocalPosition: {x: 4.97, y: 5.96, z: -0.3533773}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21352,7 +21352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bc82fca624814449188183c0a15201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hero: {fileID: 880145073}
+  hero: {fileID: 819626225}
   distanztoHero: 0
   rotationSpeed: 30
   gun: {fileID: 1478402930}
@@ -21374,7 +21374,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1c296947519a8ef4380c5302267cf26d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
