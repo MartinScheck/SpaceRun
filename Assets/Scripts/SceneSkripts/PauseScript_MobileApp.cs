@@ -8,10 +8,12 @@ public class PauseScript_MobileApp : MonoBehaviour
     public GameObject pauseMenu;
     public static bool isPaused;        //global var can be use to make sth
     public GameObject pauseIcon;
+    public GameObject pausePlay;
 
     // Start is called before the first frame update
     void Start()
     {
+        pausePlay.SetActive(false);
         pauseMenu.SetActive(false);
         isPaused = false;
         pauseIcon.SetActive(true);
@@ -35,6 +37,7 @@ public class PauseScript_MobileApp : MonoBehaviour
 
     public void PauseGame()
     {
+        pausePlay.SetActive(true);
         pauseMenu.SetActive(true);
         pauseIcon.SetActive(false);
         Time.timeScale = 0.0f;
@@ -43,6 +46,7 @@ public class PauseScript_MobileApp : MonoBehaviour
 
     public void ResumeGame()
     {
+        pausePlay.SetActive(false);
         pauseMenu.SetActive(false);
         pauseIcon.SetActive(true);
         Time.timeScale = 1.0f;
